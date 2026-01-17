@@ -120,26 +120,14 @@ if HAS_REDDIT:
         except Exception as e:
             print(f"Warning: Could not initialize Reddit client with credentials: {e}")
             reddit_client = None
-    else:
-        # Reddit now requires OAuth credentials even for read-only access
-        # You need to create a Reddit app to get client_id and client_secret
-        print("Reddit: ✗ (credentials required)")
-        print("  Note: Reddit API now requires OAuth credentials even for read-only access.")
-        print("  To enable Reddit scraping:")
-        print("  1. Go to https://www.reddit.com/prefs/apps")
-        print("  2. Click 'create app' or 'create another app'")
-        print("  3. Choose 'script' type")
-        print("  4. Copy the Client ID and Secret")
-        print("  5. Add to .env: REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET")
-        reddit_client = None
-        reddit_available = False
 else:
     print("Reddit: ✗ (praw not installed)")
 
 # Check if Twitter is available (has tweepy AND bearer token)
 twitter_available = False
-twitter_bearer_token = "AAAAAAAAAAAAAAAAAAAAAJtY7AEAAAAADBQREeLKASnllbdzuLAIxiCOED4%3DYRWwhrjmrjHh3MMGDx4QAv1ngW6YUkqBFjjVGht8cXneYYCbky"
+twitter_bearer_token = None
 if HAS_TWITTER:
+    twitter_bearer_token = os.getenv("TWITTER_BEARER_TOKEN")
     if twitter_bearer_token:
         twitter_available = True
         print("Twitter: ✓ (bearer token found)")

@@ -25,19 +25,54 @@ def upload_politicians():
     politicians = data.get('Politician', [])
 
     print(f"Starting upload of {len(politicians)} politicians...")
-
-    for person in politicians:
+    
+    # Check for duplicates in the data and track which ones to process
+    seen_in_batch = {}
+    duplicates_in_data = []
+    politicians_to_upload = []
+    
+    for i, person in enumerate(politicians):
         name = person.get('Name')
         year = person.get('Year')
         if not name or not year:
             continue
             
+        key = f"{name}|{year}"
+        if key in seen_in_batch:
+            duplicates_in_data.append((i, name, year))
+        else:
+            seen_in_batch[key] = True
+            politicians_to_upload.append(person)
+    
+    if duplicates_in_data:
+        print(f"Warning: Found {len(duplicates_in_data)} duplicate Name/Year combinations in data.json:")
+        for idx, name, year in duplicates_in_data:
+            print(f"  - {name} ({year}) at index {idx}")
+        print(f"Will upload {len(politicians_to_upload)} unique politicians...\n")
+
+    uploaded = 0
+    skipped = 0
+    
+    for person in politicians_to_upload:
+        name = person.get('Name')
+        year = person.get('Year')
+        
         # Create a unique Document ID using Name and Year (e.g., "Gavin Newsom" 2018 -> "Gavin_Newsom_2018")
         doc_id = f"{name.replace(' ', '_')}_{year}"
         
-        # 5. Upload to the 'Politicians' collection
+        # Check if document already exists in Firestore
+        existing_doc = db.collection('Politicians').document(doc_id).get()
+        if existing_doc.exists:
+            print(f"Skipping {name} ({year}) - already exists in Firestore")
+            skipped += 1
+            continue
+        
+        # Upload to the 'Politicians' collection
         db.collection('Politicians').document(doc_id).set(person)
-        print(f"Successfully uploaded: {name}")
+        print(f"Successfully uploaded: {name} ({year})")
+        uploaded += 1
+    
+    print(f"\nUpload complete! Uploaded: {uploaded}, Skipped: {skipped}")
 
     print("Data upload complete!")
 
