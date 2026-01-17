@@ -1,4 +1,6 @@
 firebase-admin
-# Optional: for AI summarization (choose one or both)
+google-genai
+praw
+tweepy
+# Optional: for AI summarization (alternative)
 # openai
-# google-generativeai
