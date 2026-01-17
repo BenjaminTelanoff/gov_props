@@ -2,5 +2,6 @@ firebase-admin
 google-genai
 praw
 tweepy
+python-dotenv
 # Optional: for AI summarization (alternative)
 # openai
