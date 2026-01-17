@@ -1,0 +1,42 @@
+<div class="container" *ngIf="politician$ | async as p">
+  <header>
+    <h1>{{ p.Name }}</h1>
+    <div class="tags">
+      <span class="tag">{{ p.Affiliation }}</span>
+      <span class="tag">{{ p.Level }} Government</span>
+    </div>
+    <p>{{ p.politician_description }}</p>
+  </header>
+
+  <section class="prop-section">
+    <table class="prop-table">
+      <thead>
+        <tr>
+          <th>Proposition</th>
+          <th>Prop Status</th>
+          <th>Consensus</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (prop of p.propsList; track $index) {
+          <tr>
+            <td>
+              <div class="prop-title">{{ prop.Name }}</div>
+              <div class="prop-desc">{{ prop.Desc }}</div>
+            </td>
+            <td>
+              <span [class]="getStatusClass(prop.Verdict)">
+                {{ prop.Verdict }}
+              </span>
+            </td>
+            <td class="consensus-text">{{ prop.Verdict_desc }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+
+  <section class="ai-overview">
+    <h3>AI Overview:</h3>
+  </section>
+</div>

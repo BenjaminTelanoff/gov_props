@@ -1,0 +1,64 @@
+<div class="container" *ngIf="politician$ | async as p">
+  <header>
+    <h1>{{ p.Name }}</h1>
+    <div class="tags">
+      <span class="tag">{{ p.Affiliation }}</span>
+      <span class="tag">{{ p.Level }} Government</span>
+    </div>
+    <p class="subtitle">{{ p.Status }}</p>
+  </header>
+
+  <section class="prop-section">
+    <table class="prop-table">
+      <thead>
+        <tr>
+          <th>Proposition</th>
+          <th>Prop Status</th>
+          <th>Consensus</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (prop of p.propsList; track $index) {
+          <tr (click)="openModal(prop)" class="clickable-row">
+            <td>
+              <div class="prop-title">{{ prop.Name }}</div>
+              <div class="prop-desc">{{ prop.Desc }}</div>
+            </td>
+            <td>
+              <span [class]="getStatusClass(prop.Verdict)">
+                {{ prop.Verdict }}
+              </span>
+            </td>
+            <td class="consensus-text">{{ prop.Verdict_desc }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+
+  <section class="ai-overview-section">
+    <h3>AI Overview:</h3>
+    <p>{{ p.politician_description }}</p>
+  </section>
+
+  @if (selectedProp) {
+    <div class="modal-backdrop" (click)="closeModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <button class="close-btn" (click)="closeModal()">&times;</button>
+        
+        <h2>{{ selectedProp.Name }}</h2>
+        
+        <p class="modal-status-line">
+          Prop Status: <span [class]="getStatusClass(selectedProp.Verdict)">{{ selectedProp.Verdict }}</span>
+        </p>
+
+        <div class="modal-ai-box">
+          <p class="label">AI Overview</p>
+          <p class="main-desc">{{ selectedProp.Desc }}</p>
+          <hr />
+          <p class="verdict-detail">{{ selectedProp.Verdict_desc }}</p>
+        </div>
+      </div>
+    </div>
+  }
+</div>
