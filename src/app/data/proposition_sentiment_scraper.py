@@ -1,16 +1,3 @@
-"""
-Proposition Sentiment Scraper: Fetches public sentiment from Twitter/X and Reddit
-about politicians' propositions, then uses Gemini AI to create 1-sentence and 
-1-paragraph summaries of how people feel about what the politician did.
-
-Setup:
-1. Install dependencies: pip install -r requirements-scraper.txt
-2. Set environment variables:
-   - GEMINI_API_KEY (or GOOGLE_API_KEY) for AI summarization
-   - REDDIT_CLIENT_ID, REDDIT_CLIENT_SECRET, REDDIT_USER_AGENT (optional, for Reddit)
-   - TWITTER_BEARER_TOKEN (optional, for Twitter API v2)
-3. Run: python proposition_sentiment_scraper.py
-"""
 
 import firebase_admin
 from firebase_admin import credentials, firestore
@@ -21,6 +8,25 @@ import time
 from typing import List, Dict, Optional
 from urllib.parse import quote
 from urllib.request import urlopen, Request
+
+# Get script directory for .env file loading
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Try to load from .env file if python-dotenv is available
+try:
+    from dotenv import load_dotenv
+    # Try loading from script directory first, then project root
+    env_paths = [
+        os.path.join(script_dir, ".env"),  # Local .env in data directory
+        os.path.join(script_dir, "..", "..", "..", ".env"),  # Root .env file
+    ]
+    for env_path in env_paths:
+        if os.path.exists(env_path):
+            load_dotenv(env_path)
+            print(f"Loaded environment variables from {env_path}")
+            break
+except ImportError:
+    pass  # python-dotenv not installed, use system environment variables
 
 # Gemini AI imports
 try:
@@ -47,7 +53,6 @@ except ImportError:
     print("Warning: tweepy not installed. Install with: pip install tweepy")
 
 # Firebase initialization
-script_dir = os.path.dirname(os.path.abspath(__file__))
 service_account_path = os.path.join(script_dir, "serviceAccountKey.json")
 
 if not firebase_admin._apps:
@@ -55,25 +60,29 @@ if not firebase_admin._apps:
         cred = credentials.Certificate(service_account_path)
         firebase_admin.initialize_app(cred)
     else:
-        # Try environment variables
+        # Try environment variables (support both FIREBASE_* and NG_APP_FIREBASE_* naming)
         firebase_creds = {
-            "type": os.getenv("FIREBASE_TYPE"),
-            "project_id": os.getenv("FIREBASE_PROJECT_ID"),
+            "type": os.getenv("FIREBASE_TYPE") or "service_account",
+            "project_id": os.getenv("FIREBASE_PROJECT_ID") or os.getenv("NG_APP_FIREBASE_PROJECT_ID"),
             "private_key_id": os.getenv("FIREBASE_PRIVATE_KEY_ID"),
             "private_key": os.getenv("FIREBASE_PRIVATE_KEY", "").replace("\\n", "\n"),
             "client_email": os.getenv("FIREBASE_CLIENT_EMAIL"),
             "client_id": os.getenv("FIREBASE_CLIENT_ID"),
-            "auth_uri": os.getenv("FIREBASE_AUTH_URI"),
-            "token_uri": os.getenv("FIREBASE_TOKEN_URI"),
-            "auth_provider_x509_cert_url": os.getenv("FIREBASE_AUTH_PROVIDER_X509_CERT_URL"),
+            "auth_uri": os.getenv("FIREBASE_AUTH_URI") or "https://accounts.google.com/o/oauth2/auth",
+            "token_uri": os.getenv("FIREBASE_TOKEN_URI") or "https://oauth2.googleapis.com/token",
+            "auth_provider_x509_cert_url": os.getenv("FIREBASE_AUTH_PROVIDER_X509_CERT_URL") or "https://www.googleapis.com/oauth2/v1/certs",
             "client_x509_cert_url": os.getenv("FIREBASE_CLIENT_X509_CERT_URL"),
-            "universe_domain": os.getenv("FIREBASE_UNIVERSE_DOMAIN"),
+            "universe_domain": os.getenv("FIREBASE_UNIVERSE_DOMAIN") or "googleapis.com",
         }
-        if firebase_creds.get("project_id"):
+        # Check if we have the minimum required fields for service account
+        if firebase_creds.get("project_id") and firebase_creds.get("private_key") and firebase_creds.get("client_email"):
             cred = credentials.Certificate(firebase_creds)
             firebase_admin.initialize_app(cred)
         else:
-            raise Exception("Firebase credentials not found. Set up serviceAccountKey.json or environment variables.")
+            raise Exception(
+                "Firebase credentials not found. Set up serviceAccountKey.json or environment variables.\n"
+                "Required: FIREBASE_PROJECT_ID (or NG_APP_FIREBASE_PROJECT_ID), FIREBASE_PRIVATE_KEY, FIREBASE_CLIENT_EMAIL"
+            )
 
 db = firestore.client()
 
@@ -89,6 +98,7 @@ if HAS_GEMINI:
 
 # Initialize Reddit client
 reddit_client = None
+reddit_available = False
 if HAS_REDDIT:
     reddit_client_id = os.getenv("REDDIT_CLIENT_ID")
     reddit_client_secret = os.getenv("REDDIT_CLIENT_SECRET")
@@ -96,22 +106,47 @@ if HAS_REDDIT:
     
     if reddit_client_id and reddit_client_secret:
         # Authenticated client (better rate limits)
-        reddit_client = praw.Reddit(
-            client_id=reddit_client_id,
-            client_secret=reddit_client_secret,
-            user_agent=reddit_user_agent
-        )
-    else:
-        # Read-only client (no auth, limited but works)
         try:
             reddit_client = praw.Reddit(
-                client_id=None,
-                client_secret=None,
+                client_id=reddit_client_id,
+                client_secret=reddit_client_secret,
                 user_agent=reddit_user_agent
             )
-            print("Using Reddit read-only mode (no authentication). For better results, set REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET.")
+            # Test if it works
+            test_subreddit = reddit_client.subreddit("test")
+            _ = test_subreddit.display_name
+            reddit_available = True
+            print("Reddit: ✓ Authenticated mode")
         except Exception as e:
-            print(f"Warning: Could not initialize Reddit client: {e}")
+            print(f"Warning: Could not initialize Reddit client with credentials: {e}")
+            reddit_client = None
+    else:
+        # Reddit now requires OAuth credentials even for read-only access
+        # You need to create a Reddit app to get client_id and client_secret
+        print("Reddit: ✗ (credentials required)")
+        print("  Note: Reddit API now requires OAuth credentials even for read-only access.")
+        print("  To enable Reddit scraping:")
+        print("  1. Go to https://www.reddit.com/prefs/apps")
+        print("  2. Click 'create app' or 'create another app'")
+        print("  3. Choose 'script' type")
+        print("  4. Copy the Client ID and Secret")
+        print("  5. Add to .env: REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET")
+        reddit_client = None
+        reddit_available = False
+else:
+    print("Reddit: ✗ (praw not installed)")
+
+# Check if Twitter is available (has tweepy AND bearer token)
+twitter_available = False
+twitter_bearer_token = "AAAAAAAAAAAAAAAAAAAAAJtY7AEAAAAADBQREeLKASnllbdzuLAIxiCOED4%3DYRWwhrjmrjHh3MMGDx4QAv1ngW6YUkqBFjjVGht8cXneYYCbky"
+if HAS_TWITTER:
+    if twitter_bearer_token:
+        twitter_available = True
+        print("Twitter: ✓ (bearer token found)")
+    else:
+        print("Twitter: ✗ (no bearer token - set TWITTER_BEARER_TOKEN to enable)")
+else:
+    print("Twitter: ✗ (tweepy not installed)")
 
 
 def search_reddit(query: str, limit: int = 10) -> List[Dict[str, str]]:
@@ -160,17 +195,13 @@ def search_reddit(query: str, limit: int = 10) -> List[Dict[str, str]]:
 
 def search_twitter(query: str, limit: int = 20) -> List[Dict[str, str]]:
     """Search Twitter/X for tweets related to the query using Twitter API v2."""
-    if not HAS_TWITTER:
-        return []
-    
-    bearer_token = os.getenv("TWITTER_BEARER_TOKEN")
-    if not bearer_token:
+    if not twitter_available or not twitter_bearer_token:
         return []
     
     results = []
     try:
         # Initialize Twitter API v2 client
-        client = tweepy.Client(bearer_token=bearer_token, wait_on_rate_limit=True)
+        client = tweepy.Client(bearer_token=twitter_bearer_token, wait_on_rate_limit=True)
         
         # Search for tweets
         search_query = f"{query} lang:en -is:retweet"
@@ -310,20 +341,28 @@ def process_proposition(politician_name: str, proposition: Dict, proposition_id:
     all_results = []
     
     # Search Reddit
-    if reddit_client:
+    if reddit_available and reddit_client:
         print(f"    Searching Reddit...")
         for query in search_queries[:2]:  # Limit queries to avoid rate limits
             results = search_reddit(query, limit=5)
             all_results.extend(results)
+            if results:
+                print(f"      Found {len(results)} Reddit results for: {query[:50]}...")
             time.sleep(2)
+    else:
+        print(f"    Skipping Reddit (credentials required - see startup message for instructions)")
     
     # Search Twitter
-    if HAS_TWITTER:
+    if twitter_available:
         print(f"    Searching Twitter/X...")
         for query in search_queries[:2]:
             results = search_twitter(query, limit=10)
             all_results.extend(results)
+            if results:
+                print(f"      Found {len(results)} Twitter results for: {query[:50]}...")
             time.sleep(2)
+    else:
+        print(f"    Skipping Twitter/X (not available - no bearer token)")
     
     print(f"    Found {len(all_results)} social media posts/comments")
     
@@ -357,8 +396,8 @@ def process_proposition(politician_name: str, proposition: Dict, proposition_id:
 def run():
     """Main function to process all politicians and their propositions."""
     print("Starting proposition sentiment scraper...")
-    print(f"Reddit: {'✓' if reddit_client else '✗'}")
-    print(f"Twitter: {'✓' if HAS_TWITTER else '✗'}")
+    print(f"Reddit: {'✓' if reddit_available else '✗'}")
+    print(f"Twitter: {'✓' if twitter_available else '✗'}")
     print(f"Gemini AI: {'✓' if gemini_client else '✗'}")
     print()
     
