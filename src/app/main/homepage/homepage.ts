@@ -1,5 +1,6 @@
 import { Component, Signal, OnInit, signal } from '@angular/core';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import {AsyncPipe} from '@angular/common';
@@ -37,5 +38,13 @@ export class Homepage implements OnInit {
     const filterValue = value.toLowerCase();
 
     return this.options().filter(option => option.toLowerCase().includes(filterValue));
+  }
+
+  constructor(private firestore: Firestore) {}
+
+  getPoliticians() {
+    const col = collection(this.firestore, 'politicians');
+    const data$ = collectionData(col, { idField: 'id' });
+    return data$;
   }
 }
