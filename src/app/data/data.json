@@ -1,0 +1,1496 @@
+{
+  "Politician": [
+    {
+      "Name": "Joe Biden",
+      "Affiliation": "Democratic",
+      "Level": "Federal",
+      "Year": 2020,
+      "Propositions": {
+        "1": {
+          "Name": "Get COVID-19 under control",
+          "Desc": "Bring COVID-19 under control nationwide, with a coordinated federal plan for testing, PPE distribution, vaccine rollout, and public health guidance.",
+          "Verdict": "Success",
+          "Verdict_desc": "Experts agree that the pandemic was effectively managed in terms of vaccine distribution, testing, and federal coordination. Efforts like the American Rescue Plan and national guidelines contributed to controlling the pandemic."
+        },
+        "2": {
+          "Name": "Provide economic relief to Americans",
+          "Desc": "Provide financial relief to Americans impacted by COVID-19, including stimulus checks, unemployment benefits, and aid to small businesses.",
+          "Verdict": "Compromised (some proposals required congressional compromises)",
+          "Verdict_desc": "The American Rescue Plan passed, providing relief payments, enhanced unemployment benefits, and small business support. However, some proposed measures did not pass or required compromises with Congress."
+        },
+        "3": {
+          "Name": "Strengthen the Affordable Care Act",
+          "Desc": "Expand and improve the Affordable Care Act, increasing insurance access and reducing healthcare costs.",
+          "Verdict": "Success",
+          "Verdict_desc": "Biden expanded ACA subsidies via the American Rescue Plan and improved healthcare access, protecting pre-existing conditions."
+        },
+        "4": {
+          "Name": "Put the U.S. on a course to net-zero emissions by 2050",
+          "Desc": "Commit to long-term climate action aiming for net-zero greenhouse gas emissions by 2050, including clean energy investments.",
+          "Verdict": "Success",
+          "Verdict_desc": "The Inflation Reduction Act and other policies advanced clean energy and emission reductions, putting the U.S. on track for net-zero emissions goals."
+        },
+        "5": {
+          "Name": "Rejoin the Paris Climate Agreement",
+          "Desc": "Recommit the United States to international climate agreements to combat global warming.",
+          "Verdict": "Success",
+          "Verdict_desc": "The U.S. formally rejoined the Paris Agreement in 2021, signaling renewed commitment to global climate cooperation."
+        },
+        "6": {
+          "Name": "Invest in infrastructure and jobs",
+          "Desc": "Invest in national infrastructure projects, including roads, bridges, broadband, and clean energy, creating jobs and stimulating the economy.",
+          "Verdict": "Compromised (funding and priorities required compromise)",
+          "Verdict_desc": "The bipartisan Infrastructure Investment and Jobs Act passed, funding many projects but requiring compromise on funding and priorities."
+        },
+        "7": {
+          "Name": "Raise the federal minimum wage to $15/hour",
+          "Desc": "Increase the federal minimum wage to $15/hour to improve living standards for low-income workers.",
+          "Verdict": "Failed (blocked in Congress)",
+          "Verdict_desc": "Attempts to raise the federal minimum wage through budget reconciliation failed; the law was not passed."
+        },
+        "8": {
+          "Name": "Expand the public health workforce",
+          "Desc": "Add 150,000 community health workers to strengthen public health systems, particularly in underserved areas.",
+          "Verdict": "Compromised (full target not reached)",
+          "Verdict_desc": "Some expansion of the public health workforce occurred, but the full goal of 150,000 additional workers was not achieved."
+        },
+        "9": {
+          "Name": "Create a pathway to citizenship for undocumented immigrants",
+          "Desc": "Establish a legal pathway to citizenship for roughly 11 million undocumented immigrants in the U.S.",
+          "Verdict": "Failed (comprehensive reform stalled)",
+          "Verdict_desc": "Comprehensive immigration reform did not pass in Congress; only partial administrative actions were taken."
+        },
+        "10": {
+          "Name": "Encourage bipartisan cooperation on the economy",
+          "Desc": "Work with both parties to pass economic legislation and stimulus packages to benefit Americans.",
+          "Verdict": "Compromised (limited cooperation overall)",
+          "Verdict_desc": "Some bipartisan successes occurred, like the infrastructure bill, but overall cooperation was limited and many proposals required compromises."
+        },
+        "11": {
+          "Name": "Criminal justice reform and police accountability",
+          "Desc": "Address systemic racism in policing, improve accountability, and reform sentencing practices.",
+          "Verdict": "Compromised (legislative reform not passed)",
+          "Verdict_desc": "Some executive actions and policy changes occurred, but comprehensive legislative reform was not passed."
+        },
+        "12": {
+          "Name": "Protect pre-existing conditions in healthcare",
+          "Desc": "Ensure individuals with pre-existing conditions cannot be denied coverage or charged higher rates.",
+          "Verdict": "Success",
+          "Verdict_desc": "ACA protections were strengthened and maintained, protecting Americans with pre-existing conditions."
+        },
+        "13": {
+          "Name": "Reduce uninsured rate among African Americans",
+          "Desc": "Close healthcare access gaps to ensure equitable insurance coverage across racial groups.",
+          "Verdict": "Success",
+          "Verdict_desc": "PolitiFact reports progress on reducing racial disparities in health coverage through ACA expansion and targeted policies."
+        },
+        "14": {
+          "Name": "Increase refugee admissions to 125,000",
+          "Desc": "Raise the annual refugee admissions cap to 125,000, reversing previous reductions.",
+          "Verdict": "Success",
+          "Verdict_desc": "The Biden administration restored refugee admissions to planned higher levels, marking a clear policy reversal."
+        },
+        "15": {
+          "Name": "No tax increases on Americans earning less than $400,000",
+          "Desc": "Ensure Americans earning under $400,000 per year do not face federal tax increases.",
+          "Verdict": "Success",
+          "Verdict_desc": "This pledge was fulfilled; tax increases were targeted only at higher-income households."
+        }
+      }
+    },
+    {
+        "Name": "Gavin Newsom",
+        "Affiliation": "Democratic",
+        "Level": "State",
+        "Role": "Governor of California",
+        "Year": 2018,
+        "Status": "Initial Term; established 'Big Hairy Audacious Goals'",
+        "Propositions": {
+          "1": {
+            "Name": "Single-Payer Healthcare",
+            "Desc": "Establish a unified, state-run healthcare system to replace private insurance.",
+            "Verdict": "Failed (Federal funding losses and massive costs made plan fiscally impossible)",
+            "Verdict_desc": "Despite his 2018 promise, Newsom pivoted to 'universal access' via Medi-Cal as the $400B price tag remained unachievable."
+          },
+          "2": {
+            "Name": "3.5 Million New Homes by 2025",
+            "Desc": "An unprecedented 'Marshall Plan' to solve the housing crisis through mass production.",
+            "Verdict": "Failed (Production levels remained stagnant at 100k units annually despite reforms)",
+            "Verdict_desc": "The 3.5 million goal was never reached; Newsom later called it a 'stretch goal' while focusing on permitting reform instead."
+          },
+          "3": {
+            "Name": "High-Speed Rail Completion",
+            "Desc": "Full commitment to completing the bullet train connecting LA to San Francisco.",
+            "Verdict": "Compromised (Project was truncated to a Central Valley line due to costs)",
+            "Verdict_desc": "In 2019, he scaled the immediate project back to a 171-mile segment in the Central Valley to manage spiraling budget overruns."
+          },
+          "4": {
+            "Name": "Six Months Paid Family Leave",
+            "Desc": "Expand California's paid leave program to a nation-leading six months for new parents.",
+            "Verdict": "Compromised (Initial expansion reached only eight weeks before being capped effectively)",
+            "Verdict_desc": "He increased leave from 6 to 8 weeks, but the six-month goal was abandoned due to employer and fiscal concerns."
+          }
+        }
+      },
+    {
+      "Name": "Bill de Blasio",
+      "Affiliation": "Democratic",
+      "Level": "Local",
+      "Role": "Former Mayor of NYC",
+      "Status": "Left office January 1, 2022",
+      "Year": 2017,
+      "Propositions": {
+        "1": {
+          "Name": "Universal 3-K for All",
+          "Desc": "Provide free, high-quality early childhood education for every three-year-old in the city.",
+          "Verdict": "Success",
+          "Verdict_desc": "Successfully expanded to all 32 school districts by 2021, serving nearly 40,000 children by his final year."
+        },
+        "2": {
+          "Name": "Housing New York 2.0 (300k Units)",
+          "Desc": "Accelerate and expand the housing plan to build or preserve 300,000 affordable units by 2026.",
+          "Verdict": "Compromised (Critics argued units were not affordable for extremely low-income families)",
+          "Verdict_desc": "While production hit record highs, the plan was criticized for focusing on middle-income households while homelessness reached record levels."
+        },
+        "3": {
+          "Name": "Close Rikers Island",
+          "Desc": "Execute a legally binding 10-year roadmap to shut down the jail and move to borough-based facilities.",
+          "Verdict": "Active",
+          "Verdict_desc": "Passed the necessary land-use approvals in 2019; however, construction and population reduction goals remain behind schedule in 2026."
+        },
+        "4": {
+          "Name": "NYC Care (Universal Healthcare Access)",
+          "Desc": "The nation's most comprehensive plan to guarantee healthcare regardless of ability to pay or immigration status.",
+          "Verdict": "Success",
+          "Verdict_desc": "Launched in 2019, the program reached all five boroughs by late 2020, providing primary care access to over 100,000 members."
+        },
+        "5": {
+          "Name": "Vision Zero NYC",
+          "Desc": "Redesign streets and lower speed limits to eliminate all traffic fatalities by 2024.",
+          "Verdict": "Failed (Traffic deaths spiked during the pandemic to twenty-year highs)",
+          "Verdict_desc": "Initial successes were reversed as reckless driving increased during 2020-2021, with 2021 becoming the deadliest year for traffic since 2013."
+        },
+        "6": {
+          "Name": "Mandatory Inclusionary Housing (MIH)",
+          "Desc": "Require developers to include affordable units in any project that benefits from a city-approved rezoning.",
+          "Verdict": "Success",
+          "Verdict_desc": "Established as law, leading to thousands of permanently affordable units in neighborhoods like East New York and Inwood."
+        },
+        "7": {
+          "Name": "Zero Waste by 2030",
+          "Desc": "Divert all city waste from landfills through expanded organics collection and recycling.",
+          "Verdict": "Compromised (Budget cuts during the pandemic significantly stalled the composting program)",
+          "Verdict_desc": "The curbside composting program was suspended in 2020 due to fiscal constraints, though it began a slow restart toward the end of his term."
+        }
+      }
+    },
+    {
+      "Name": "Eric Garcetti",
+      "Affiliation": "Democratic",
+      "Level": "Local",
+      "Role": "Former Mayor of Los Angeles",
+      "Status": "Left office Dec 2022",
+      "Year": 2017,
+      "Propositions": {
+        "1": {
+          "Name": "Measure HHH (Homeless Housing)",
+          "Desc": "Direct $1.2 billion in bond funds to build 10,000 permanent supportive housing units for the unhoused.",
+          "Verdict": "Compromised (Construction costs exceeded $500k per unit causing massive production delays)",
+          "Verdict_desc": "Housing was delivered, but at a pace and cost that drew heavy criticism on Reddit and local news for being inefficient."
+        },
+        "2": {
+          "Name": "L.A. Green New Deal",
+          "Desc": "Modernize the power grid and transition the city to 100% renewable energy by 2045.",
+          "Verdict": "Success",
+          "Verdict_desc": "Codified the targets into law and secured historic investments in the LADWP to retire natural gas plants early."
+        },
+        "3": {
+          "Name": "L.A. College Promise",
+          "Desc": "Provide two years of tuition-free community college to all LAUSD graduates.",
+          "Verdict": "Success",
+          "Verdict_desc": "Successfully launched and expanded to serve over 15,000 students annually by 2021, significantly increasing enrollment."
+        },
+        "4": {
+          "Name": "Twenty-Eight by '28 (Transit Expansion)",
+          "Desc": "Complete 28 major infrastructure projects before the 2028 Olympic and Paralympic Games.",
+          "Verdict": "Active",
+          "Verdict_desc": "Major lines like the K Line and Regional Connector were completed; several others are currently under construction as of 2026."
+        },
+        "5": {
+          "Name": "Vision Zero LA",
+          "Desc": "End all traffic deaths in Los Angeles by 2025 through engineering and enforcement.",
+          "Verdict": "Failed (Fatalities rose nearly thirty percent between 2020 and 2022)",
+          "Verdict_desc": "Traffic deaths hit a twenty-year high in his final year, with 312 lives lost in 2022 despite increased safety spending."
+        },
+        "6": {
+          "Name": "Raising the Minimum Wage to $15",
+          "Desc": "A phased increase of the city's minimum wage to reach $15 by 2020.",
+          "Verdict": "Success",
+          "Verdict_desc": "The city successfully met the $15 threshold in July 2020 and has since implemented annual cost-of-living adjustments."
+        },
+        "7": {
+          "Name": "Clean Streets L.A.",
+          "Desc": "Establish a block-by-block assessment of 9,100 miles of streets to prioritize trash and pothole removal.",
+          "Verdict": "Success",
+          "Verdict_desc": "Created a new data-driven system for the Bureau of Sanitation that significantly improved response times for illegal dumping reports."
+        }
+      }
+    },
+    {
+        "Name": "Donald Trump",
+        "Affiliation": "Republican",
+        "Level": "Federal",
+        "Role": "45th President of the United States",
+        "Year": 2016,
+        "Status": "First term completed Jan 2021",
+        "Propositions": {
+          "1": {
+            "Name": "Build a Wall and make Mexico pay for it",
+            "Desc": "Construct a contiguous physical wall along the southern border funded by Mexico.",
+            "Verdict": "Failed (Mexico refused payment and Congress blocked full wall funding)",
+            "Verdict_desc": "About 450 miles were built, mostly replacing old barriers, using U.S. taxpayer funds after Mexico flatly refused to pay."
+          },
+          "2": {
+            "Name": "Repeal and Replace Obamacare (ACA)",
+            "Desc": "Completely dismantle the Affordable Care Act and replace it with a private market system.",
+            "Verdict": "Failed (Senate vote blocked repeal despite a Republican majority Congress)",
+            "Verdict_desc": "A key Senate vote (notably by John McCain) killed the repeal effort, though the individual mandate penalty was later removed via tax law."
+          },
+          "3": {
+            "Name": "Individual and Corporate Tax Cuts",
+            "Desc": "Massive tax overhaul to lower corporate rates to 15% and simplify individual brackets.",
+            "Verdict": "Compromised (Corporate rate landed at 21% rather than the promised 15%)",
+            "Verdict_desc": "The Tax Cuts and Jobs Act of 2017 was a major win but required negotiation on the final percentages to pass the Senate."
+          },
+          "4": {
+            "Name": "Withdraw from the Trans-Pacific Partnership (TPP)",
+            "Desc": "Exit the multi-nation trade deal to protect American manufacturing jobs.",
+            "Verdict": "Success",
+            "Verdict_desc": "He signed an executive order to formally withdraw from the TPP on his third day in office."
+          },
+          "5": {
+            "Name": "Nominate Conservative Supreme Court Justices",
+            "Desc": "Fill vacancies with originalist judges from a pre-vetted list.",
+            "Verdict": "Success",
+            "Verdict_desc": "He successfully appointed three justices—Gorsuch, Kavanaugh, and Barrett—tilting the court to a 6-3 conservative majority."
+          }
+        }
+      },
+      {
+        "Name": "Donald Trump",
+        "Affiliation": "Republican",
+        "Level": "Federal",
+        "Role": "47th President of the United States",
+        "Year": 2024,
+        "Status": "Currently in office (Second Term)",
+        "Propositions": {
+          "1": {
+            "Name": "The largest deportation operation in history",
+            "Desc": "Using the military and local police to deport millions of undocumented immigrants.",
+            "Verdict": "Active",
+            "Verdict_desc": "Large-scale operations began in early 2025, primarily targeting those with criminal records, though legal challenges in blue states have slowed the pace."
+          },
+          "2": {
+            "Name": "Universal Baseline Tariffs",
+            "Desc": "Impose a 10% to 20% tariff on all imported goods to stimulate domestic production.",
+            "Verdict": "Compromised (Retaliatory trade wars led to exemptions for key strategic allies)",
+            "Verdict_desc": "While heavy tariffs were placed on China, negotiations in late 2025 led to lower rates for the UK and Canada to prevent supply chain collapses."
+          },
+          "3": {
+            "Name": "End Birthright Citizenship",
+            "Desc": "Sign an executive order ending citizenship for children of undocumented parents born on U.S. soil.",
+            "Verdict": "Active/Stalled",
+            "Verdict_desc": "The order was signed on Day One in 2025, but it is currently tied up in the Supreme Court as a direct challenge to the 14th Amendment."
+          },
+          "4": {
+            "Name": "Establish DOGE (Dept. of Government Efficiency)",
+            "Desc": "A new commission led by Elon Musk and Vivek Ramaswamy to cut $2 trillion in waste.",
+            "Verdict": "Success",
+            "Verdict_desc": "The commission was established and has already successfully initiated layoffs in several non-essential federal agencies by early 2026."
+          },
+          "5": {
+            "Name": "No Tax on Tips and Social Security",
+            "Desc": "Eliminate federal income tax on tipped income and Social Security benefits for seniors.",
+            "Verdict": "Success",
+            "Verdict_desc": "Passed as part of the 'One Big Beautiful Bill' in mid-2025, providing immediate tax relief to millions of workers and retirees."
+          }
+        }
+      },
+      {
+        "Name": "Gavin Newsom",
+        "Affiliation": "Democratic",
+        "Level": "State",
+        "Role": "Governor of California",
+        "Year": 2021,
+        "Status": "Defeated Recall; focused on 'California Comeback' after COVID-19",
+        "Propositions": {
+          "1": {
+            "Name": "Universal Transitional Kindergarten (TK)",
+            "Desc": "Guarantee a free year of high-quality preschool for every four-year-old in California.",
+            "Verdict": "Success",
+            "Verdict_desc": "Successfully met the 2025-26 deadline for full implementation, now serving over 400,000 children statewide."
+          },
+          "2": {
+            "Name": "200,000 New Child Care Slots",
+            "Desc": "Massive expansion of subsidized child care to help parents return to work.",
+            "Verdict": "Compromised (Plan delayed two years and remains tens of thousands short)",
+            "Verdict_desc": "Budget deficits led to a freeze on new slots; the goal's deadline was officially moved to 2028."
+          },
+          "3": {
+            "Name": "CARE Court (Mental Health Reform)",
+            "Desc": "A new court-ordered system to compel treatment for those with severe untreated schizophrenia.",
+            "Verdict": "Success",
+            "Verdict_desc": "Launched in all 58 counties by late 2024 and strengthened with new legislation in 2025 (SB 27)."
+          },
+          "4": {
+            "Name": "Project Homekey Expansion",
+            "Desc": "Using billions in state funds to buy motels and convert them into permanent homeless housing.",
+            "Verdict": "Success",
+            "Verdict_desc": "Created nearly 16,000 permanent homes across 250 projects, reaching over 172,000 people by early 2026."
+          },
+          "5": {
+            "Name": "End Encampments via SAFE Taskforce",
+            "Desc": "State-led efforts to clear highway encampments and connect people to services.",
+            "Verdict": "Active",
+            "Verdict_desc": "Following a 2024 Supreme Court ruling, Newsom issued an executive order in 2025 to clear camps humanely but firmly."
+          }
+        }
+      },
+      {
+        "Name": "Greg Abbott",
+        "Affiliation": "Republican",
+        "Level": "State",
+        "Role": "Governor of Texas",
+        "Year": 2022,
+        "Status": "Currently in office (Third Term)",
+        "Propositions": {
+          "1": {
+            "Name": "Operation Lone Star",
+            "Desc": "Deploying the National Guard and DPS to the border to combat illegal immigration and drug smuggling.",
+            "Verdict": "Success",
+            "Verdict_desc": "Maintained as a massive state-funded operation that has apprehended hundreds of thousands, though critics on Reddit highlight its multi-billion dollar cost."
+          },
+          "2": {
+            "Name": "School Vouchers (Education Savings Accounts)",
+            "Desc": "Allowing public education funds to follow students to private or religious schools.",
+            "Verdict": "Failed (Blocked by a coalition of Democrats and rural Republicans in the House)",
+            "Verdict_desc": "Despite making it a top priority in 2023, rural GOP members joined Democrats to stop the measure due to public school funding concerns."
+          },
+          "3": {
+            "Name": "Prohibit COVID-19 Vaccine Mandates",
+            "Desc": "Ensure no Texan is forced to take a COVID-19 vaccine by any entity, including private businesses.",
+            "Verdict": "Success",
+            "Verdict_desc": "Signed SB 29 into law, codified protections against vaccine mandates for all Texas residents."
+          }
+        }
+      },
+      {
+        "Name": "Ron DeSantis",
+        "Affiliation": "Republican",
+        "Level": "State",
+        "Role": "Governor of Florida",
+        "Year": 2022,
+        "Status": "Currently in office (Second Term)",
+        "Propositions": {
+          "1": {
+            "Name": "Keep Florida Open (Anti-Lockdown)",
+            "Desc": "Vowing to never return to COVID-19 lockdowns or mask mandates in schools or businesses.",
+            "Verdict": "Success",
+            "Verdict_desc": "Fulfilling his central 2022 promise, he signed permanent legislation banning COVID-19 mandates statewide."
+          },
+          "2": {
+            "Name": "Constitutional Carry",
+            "Desc": "Allowing law-abiding citizens to carry a concealed weapon without a government permit.",
+            "Verdict": "Success",
+            "Verdict_desc": "Signed HB 543 in 2023, making Florida the 26th state to allow permitless concealed carry."
+          },
+          "3": {
+            "Name": "Universal School Choice",
+            "Desc": "Expanding the state's voucher program to all students regardless of family income.",
+            "Verdict": "Success",
+            "Verdict_desc": "Signed HB 1, making Florida the largest state to offer universal school choice vouchers."
+          }
+        }
+      },
+      {
+        "Name": "London Breed",
+        "Affiliation": "Democratic",
+        "Level": "Local",
+        "Role": "Former Mayor of San Francisco",
+        "Year": 2019,
+        "Status": "Left office January 2025",
+        "Propositions": {
+          "1": {
+            "Name": "30 by 30 (Downtown Revitalization)",
+            "Desc": "Bring 30,000 new residents and students to downtown SF by the year 2030.",
+            "Verdict": "Active",
+            "Verdict_desc": "Initiated the plan with university partnerships and office-to-housing conversion laws; progress continues under the new administration."
+          },
+          "2": {
+            "Name": "End Open-Air Drug Markets",
+            "Desc": "Coordinate local and state law enforcement to shut down drug dealing in the Tenderloin.",
+            "Verdict": "Compromised (Increased arrests occurred but drug overdose deaths hit record levels in 2023)",
+            "Verdict_desc": "While police coordination increased, the scale of the fentanyl crisis outpaced enforcement efforts during her final years."
+          },
+          "3": {
+            "Name": "Build 82,000 New Homes",
+            "Desc": "A state-mandated goal to permit and build 82,000 units by 2031.",
+            "Verdict": "Failed (Permitting was too slow to meet the required annual construction pace)",
+            "Verdict_desc": "San Francisco consistently fell behind the required pace, leading to state intervention and 'pro-housing' audits."
+          }
+        }
+      },
+      {
+        "Name": "Todd Gloria",
+        "Affiliation": "Democratic",
+        "Level": "Local",
+        "Role": "Mayor of San Diego",
+        "Year": 2020,
+        "Status": "Currently in office (Second Term)",
+        "Propositions": {
+          "1": {
+            "Name": "Unsafe Camping Ordinance",
+            "Desc": "Banning encampments on public property if shelter beds are available.",
+            "Verdict": "Success",
+            "Verdict_desc": "Passed and enforced the ordinance in 2023, leading to an 80% reduction in tents in the downtown core."
+          },
+          "2": {
+            "Name": "Repair 25% of City Roads",
+            "Desc": "A major infrastructure push to fix the city's crumbling street network.",
+            "Verdict": "Success",
+            "Verdict_desc": "Met the milestone in 2024, repairing over 1,500 miles of city streets through his 'Ready to Rebuild' budget."
+          },
+          "3": {
+            "Name": "End the Sexual Orientation/Gender Identity (SOGI) Gap",
+            "Desc": "Ensuring San Diego is the safest big city for LGBTQ+ residents through policy and policing.",
+            "Verdict": "Success",
+            "Verdict_desc": "Implemented new training and community liaisons, resulting in San Diego receiving a perfect 100 on the HRC Municipal Equality Index."
+          }
+        }
+      },
+      {
+        "Name": "Barack Obama",
+        "Affiliation": "Democratic",
+        "Level": "Federal",
+        "Role": "44th President of the United States",
+        "Year": 2012,
+        "Status": "Term limited; left office January 2017",
+        "Propositions": {
+          "1": {
+            "Name": "Curb Carbon Emissions",
+            "Desc": "Implement federal caps on carbon emissions to combat climate change.",
+            "Verdict": "Compromised (Legislative 'Cap and Trade' failed; transitioned to Clean Power Plan)",
+            "Verdict_desc": "After Congress failed to pass cap-and-trade, Obama used executive authority through the EPA to regulate power plants instead."
+          },
+          "2": {
+            "Name": "Comprehensive Immigration Reform",
+            "Desc": "Pass a bill providing a pathway to citizenship and enhanced border security.",
+            "Verdict": "Failed (House Republicans blocked the bipartisan Senate-passed bill in 2013)",
+            "Verdict_desc": "Despite the 'Gang of Eight' bill passing the Senate, it was never brought to a vote in the House of Representatives."
+          },
+          "3": {
+            "Name": "Close Guantanamo Bay",
+            "Desc": "Close the detention facility in Cuba and move prisoners to the U.S.",
+            "Verdict": "Failed (Congress prohibited using federal funds to move prisoners to U.S. soil)",
+            "Verdict_desc": "While he significantly reduced the prisoner population, the facility remained open due to strict legislative blocks on domestic transfers."
+          }
+        }
+      },
+      {
+        "Name": "Mitt Romney",
+        "Affiliation": "Republican",
+        "Level": "Federal",
+        "Role": "2012 Presidential Nominee",
+        "Year": 2012,
+        "Status": "Later served as Senator; retired January 2025",
+        "Propositions": {
+          "1": {
+            "Name": "Repeal Obamacare (ACA)",
+            "Desc": "On Day One, issue an executive order to pave the way for a full repeal of the ACA.",
+            "Verdict": "Failed (Romney lost the 2012 election; ACA remained in place)",
+            "Verdict_desc": "As he was not elected to the Presidency in 2012, he could not execute the repeal."
+          },
+          "2": {
+            "Name": "Slash Corporate Tax Rate to 25%",
+            "Desc": "Lower the corporate tax rate from 35% to 25% to spur investment.",
+            "Verdict": "Failed (Did not win election; plan was never put into effect)",
+            "Verdict_desc": "The proposal was a central pillar of his platform but died with his campaign."
+          },
+          "3": {
+            "Name": "Designate China as a Currency Manipulator",
+            "Desc": "Use the Treasury Department to officially label China on his first day in office.",
+            "Verdict": "Failed (Lost election; label was never applied by the 2012 winner)",
+            "Verdict_desc": "Obama did not apply this label in 2012, and Romney never gained the power to do so."
+          }
+        }
+      },
+      {
+        "Name": "Elizabeth Warren",
+        "Affiliation": "Democratic",
+        "Level": "Federal",
+        "Role": "U.S. Senator (MA)",
+        "Year": 2012,
+        "Status": "Currently in office",
+        "Propositions": {
+          "1": {
+            "Name": "Level the Playing Field for Working Families",
+            "Desc": "Strengthen consumer protections and increase taxes on giant corporations.",
+            "Verdict": "Success",
+            "Verdict_desc": "Successfully championed the creation of the CFPB (pre-Senate) and passed the 15% corporate minimum tax in 2022."
+          },
+          "2": {
+            "Name": "Refinance Student Loan Debt",
+            "Desc": "Allow borrowers to refinance old student loans at lower current interest rates.",
+            "Verdict": "Failed (Senate Republicans blocked the 'Bank on Students' act repeatedly)",
+            "Verdict_desc": "Despite massive social media support, the bill failed to clear the 60-vote filibuster threshold in 2014."
+          },
+          "3": {
+            "Name": "Protect Social Security Benefits",
+            "Desc": "Oppose any cuts to benefits and advocate for expanding cost-of-living adjustments.",
+            "Verdict": "Success",
+            "Verdict_desc": "Successfully fought off 'Chained CPI' proposals in 2013 and has maintained a 100% pro-Social Security voting record."
+          }
+        }
+      },
+      {
+        "Name": "Ted Cruz",
+        "Affiliation": "Republican",
+        "Level": "Federal",
+        "Role": "U.S. Senator (TX)",
+        "Year": 2012,
+        "Status": "Currently in office",
+        "Propositions": {
+          "1": {
+            "Name": "Repeal Every Word of Obamacare",
+            "Desc": "Utilize any means necessary to fully dismantle the Affordable Care Act.",
+            "Verdict": "Failed (Legislative repeal efforts failed in 2017 despite a Republican majority)",
+            "Verdict_desc": "Cruz led a 21-hour filibuster and supported 'skinny repeal,' but the law remains the law of the land."
+          },
+          "2": {
+            "Name": "Abolish the IRS",
+            "Desc": "Implement a simple flat tax and eliminate the Internal Revenue Service entirely.",
+            "Verdict": "Failed (Flat tax legislation lacked support within his own party)",
+            "Verdict_desc": "The proposal remains a campaign staple but has never gained enough traction to reach a floor vote."
+          },
+          "3": {
+            "Name": "Supreme Court Accountability Act",
+            "Desc": "Ensure justices are subject to periodic retention elections rather than life terms.",
+            "Verdict": "Failed (Requires a Constitutional amendment which never gained broad support)",
+            "Verdict_desc": "This highly controversial proposal garnered viral engagement but zero legislative progress."
+          }
+        }
+      },
+      {
+        "Name": "Bernie Sanders",
+        "Affiliation": "Independent",
+        "Level": "Federal",
+        "Role": "U.S. Senator (VT)",
+        "Year": 2012,
+        "Status": "Currently in office",
+        "Propositions": {
+          "1": {
+            "Name": "Expand Social Security",
+            "Desc": "Lift the cap on taxable income to increase benefits for seniors.",
+            "Verdict": "Active",
+            "Verdict_desc": "Sanders continues to introduce the Social Security Expansion Act every session, serving as a benchmark for progressive policy."
+          },
+          "2": {
+            "Name": "Reverse Citizens United",
+            "Desc": "Pass a constitutional amendment to declare that corporations are not people.",
+            "Verdict": "Failed (Amendment process stalled due to lack of bipartisan support)",
+            "Verdict_desc": "While a popular Reddit topic, the amendment has not moved past committee stages in over a decade."
+          },
+          "3": {
+            "Name": "Universal Healthcare (Medicare for All)",
+            "Desc": "Transition the U.S. to a single-payer, government-funded healthcare system.",
+            "Verdict": "Failed (High costs and industry opposition prevented floor votes)",
+            "Verdict_desc": "The bill has gained dozens of co-sponsors but remains a 'visionary' goal rather than active law."
+          }
+        }
+      },
+      {
+        "Name": "Dianne Feinstein",
+        "Affiliation": "Democratic",
+        "Level": "Federal",
+        "Role": "Former U.S. Senator (CA)",
+        "Year": 2012,
+        "Status": "Passed away in office 2023",
+        "Propositions": {
+          "1": {
+            "Name": "Assault Weapons Ban",
+            "Desc": "Re-instate the 1994 federal ban on high-capacity semi-automatic rifles.",
+            "Verdict": "Failed (Senate vote fell short after the Sandy Hook tragedy)",
+            "Verdict_desc": "Following the 2012 shooting, her 2013 amendment was defeated 40-60 in the Senate."
+          },
+          "2": {
+            "Name": "Torture Report Publication",
+            "Desc": "Declassify the CIA's use of 'enhanced interrogation' techniques post-9/11.",
+            "Verdict": "Success",
+            "Verdict_desc": "Despite fierce CIA opposition, she successfully released the 500-page summary in late 2014."
+          },
+          "3": {
+            "Name": "Lake Tahoe Restoration Act",
+            "Desc": "Secure $415 million in federal funds to protect the Lake Tahoe basin.",
+            "Verdict": "Success",
+            "Verdict_desc": "The bipartisan bill was signed into law in 2016, providing critical funding for environmental preservation."
+          }
+        }
+      },
+      {
+        "Name": "Scott Walker",
+        "Affiliation": "Republican",
+        "Level": "State",
+        "Role": "Former Governor of Wisconsin",
+        "Year": 2012,
+        "Status": "Left office January 2019",
+        "Propositions": {
+          "1": {
+            "Name": "Act 10 (Collective Bargaining Reform)",
+            "Desc": "Limit collective bargaining for most public employees to base wage increases.",
+            "Verdict": "Success",
+            "Verdict_desc": "Successfully implemented and survived both a recall election and multiple constitutional challenges."
+          },
+          "2": {
+            "Name": "Create 250,000 Private-Sector Jobs",
+            "Desc": "Vowed to reach this specific job creation milestone in his first term.",
+            "Verdict": "Failed (Final job count was less than half of the goal)",
+            "Verdict_desc": "Wisconsin added only about 129,000 jobs during his first term, missing the target by 48%."
+          },
+          "3": {
+            "Name": "Universal Right-to-Work Law",
+            "Desc": "Prohibit labor contracts that require workers to pay union dues.",
+            "Verdict": "Success",
+            "Verdict_desc": "Signed the legislation in 2015, making Wisconsin the 25th right-to-work state."
+          }
+        }
+      },
+      {
+        "Name": "John Thune",
+        "Affiliation": "Republican",
+        "Level": "Federal",
+        "Role": "Senate Majority Leader",
+        "Year": 2024,
+        "Status": "Currently in office",
+        "Propositions": {
+          "1": {
+            "Name": "Tax Cuts and Jobs Act Extension",
+            "Desc": "Make the 2017 individual tax cuts permanent through budget reconciliation.",
+            "Verdict": "Success",
+            "Verdict_desc": "As Majority Leader, Thune prioritized and passed the extension in the first 100 days of 2025."
+          },
+          "2": {
+            "Name": "Rural Telehealth Expansion",
+            "Desc": "Pass permanent reimbursement rules for telehealth services in rural communities.",
+            "Verdict": "Success",
+            "Verdict_desc": "The CONNECT for Health Act was incorporated into the 2025 year-end spending package."
+          },
+          "3": {
+            "Name": "USDA Spending Oversight",
+            "Desc": "Audit and reduce discretionary spending within the Department of Agriculture.",
+            "Verdict": "Compromised (Audit completed but proposed cuts were blocked by Farm Caucus)",
+            "Verdict_desc": "While the audit revealed inefficiencies, actual budget cuts were minimal due to pressure from rural lawmakers."
+          }
+        }
+      },
+      {
+        "Name": "Andrew Yang",
+        "Affiliation": "Forward Party",
+        "Level": "Federal",
+        "Role": "2020 Presidential Candidate",
+        "Year": 2020,
+        "Status": "Left Democratic Party; leading Forward Party",
+        "Propositions": {
+          "1": {
+            "Name": "Universal Basic Income (Freedom Dividend)",
+            "Desc": "Provide $1,000 a month to every American adult regardless of status.",
+            "Verdict": "Failed (Lacked support from both major parties and Congressional leadership)",
+            "Verdict_desc": "The proposal went viral on Reddit and Twitter but never moved toward legislative drafting."
+          },
+          "2": {
+            "Name": "Democracy Dollars",
+            "Desc": "Give every voter a $100 voucher to donate to their preferred candidates.",
+            "Verdict": "Failed (Campaign finance reform priorities shifted away from voucher models)",
+            "Verdict_desc": "The idea remains popular in Forward Party circles but has zero footprint in current federal law."
+          },
+          "3": {
+            "Name": "Data as a Property Right",
+            "Desc": "Legally recognize digital data as personal property that tech companies must pay for.",
+            "Verdict": "Active",
+            "Verdict_desc": "While federal law has not passed, his advocacy contributed to the 2024 California Delete Act and similar state-level privacy laws."
+          }
+        }
+      },
+      {
+        "Name": "Rand Paul",
+        "Affiliation": "Republican",
+        "Level": "Federal",
+        "Role": "U.S. Senator (KY)",
+        "Year": 2016,
+        "Propositions": {
+          "1": {
+            "Name": "Audit the Fed",
+            "Desc": "Require a full audit of the Federal Reserve's monetary policy decisions.",
+            "Verdict": "Failed (Legislative attempts consistently fell short of the sixty-vote threshold)",
+            "Verdict_desc": "Paul has reintroduced the bill multiple times, but it has not passed the Senate."
+          },
+          "2": {
+            "Name": "Ending Bulk Metadata Collection",
+            "Desc": "Stop the NSA from collecting the phone records of millions of Americans.",
+            "Verdict": "Success",
+            "Verdict_desc": "His 10.5-hour filibuster in 2015 forced the expiration of certain Patriot Act provisions and led to the USA Freedom Act."
+          },
+          "3": {
+            "Name": "REDEEM Act (Criminal Justice)",
+            "Desc": "Allow non-violent juvenile offenders to expunge their records.",
+            "Verdict": "Compromised (The bill stalled but parts were included in 2018)",
+            "Verdict_desc": "While the stand-alone REDEEM Act didn't pass, its core juvenile justice principles informed the First Step Act."
+          }
+        }
+      },
+      {
+        "Name": "Rick Scott",
+        "Affiliation": "Republican",
+        "Level": "State",
+        "Role": "Former Governor of Florida",
+        "Year": 2014,
+        "Propositions": {
+          "1": {
+            "Name": "700,000 Jobs in 7 Years",
+            "Desc": "A specific metric-based goal to drive Florida's post-recession recovery.",
+            "Verdict": "Success",
+            "Verdict_desc": "Florida surpassed the job creation goal well within the seven-year timeframe."
+          },
+          "2": {
+            "Name": "Cut Taxes by $1 Billion",
+            "Desc": "A major commitment to reduce the state's tax burden on families and businesses.",
+            "Verdict": "Success",
+            "Verdict_desc": "Reached the milestone through dozens of smaller tax cuts throughout his second term."
+          },
+          "3": {
+            "Name": "Expand Medicaid (ACA)",
+            "Desc": "Initial 2013-2014 promise to support the federal expansion of healthcare coverage.",
+            "Verdict": "Failed (The Republican-led state legislature refused to approve the expansion plan)",
+            "Verdict_desc": "Despite Scott's late support, the Florida House blocked the expansion, leaving 700,000 uninsured."
+          }
+        }
+      },
+      {
+        "Name": "Nikki Haley",
+        "Affiliation": "Republican",
+        "Level": "State",
+        "Role": "Former Governor of South Carolina",
+        "Year": 2014,
+        "Propositions": {
+          "1": {
+            "Name": "Transparency in Spending",
+            "Desc": "Put the state checkbook online so citizens can track every dollar spent.",
+            "Verdict": "Success",
+            "Verdict_desc": "Launched the 'South Carolina Spending Transparency' website, making state finances publicly accessible."
+          },
+          "2": {
+            "Name": "Ethics Reform",
+            "Desc": "Require state lawmakers to disclose their private sources of income.",
+            "Verdict": "Success",
+            "Verdict_desc": "Signed landmark ethics legislation in 2016 to increase accountability in Columbia."
+          },
+          "3": {
+            "Name": "Pension System Overhaul",
+            "Desc": "Aggressively reform the state's underfunded pension system to ensure solvency.",
+            "Verdict": "Compromised (Legislative resistance led to smaller fixes rather than full reform)",
+            "Verdict_desc": "While some adjustments were made, the system's long-term unfunded liability remained a significant challenge."
+          }
+        }
+      },
+      {
+        "Name": "Brian Kemp",
+        "Affiliation": "Republican",
+        "Level": "State",
+        "Role": "Governor of Georgia",
+        "Year": 2018,
+        "Propositions": {
+          "1": {
+            "Name": "$5,000 Teacher Pay Raise",
+            "Desc": "Provide a permanent salary increase for all public school teachers in Georgia.",
+            "Verdict": "Success",
+            "Verdict_desc": "Successfully fulfilled the full $5,000 commitment across several budget cycles by 2022."
+          },
+          "2": {
+            "Name": "Rural Broadband Expansion",
+            "Desc": "Invest state funds to bring high-speed internet to underserved rural areas.",
+            "Verdict": "Success",
+            "Verdict_desc": "Allocated hundreds of millions in grants that connected over 200,000 rural homes and businesses."
+          },
+          "3": {
+            "Name": "Dismantle Common Core",
+            "Desc": "Replace federal education standards with Georgia-specific 'Georgia Standards of Excellence.'",
+            "Verdict": "Compromised (Critics argue the new standards are largely renamed Common Core)",
+            "Verdict_desc": "The state rebranded the standards, but educators noted significant overlap with the original curriculum."
+          }
+        }
+      },
+      {
+        "Name": "Jay Inslee",
+        "Affiliation": "Democratic",
+        "Level": "State",
+        "Role": "Governor of Washington",
+        "Year": 2020,
+        "Propositions": {
+          "1": {
+            "Name": "100% Clean Energy by 2045",
+            "Desc": "Transition Washington's entire electricity grid to carbon-free sources.",
+            "Verdict": "Success",
+            "Verdict_desc": "Signed the Clean Energy Transformation Act (CETA), codifying one of the nation's strictest mandates."
+          },
+          "2": {
+            "Name": "Carbon Cap-and-Invest",
+            "Desc": "Create a market-based system to limit and price carbon pollution.",
+            "Verdict": "Success",
+            "Verdict_desc": "Successfully passed the Climate Commitment Act in 2021, generating billions for green infrastructure."
+          },
+          "3": {
+            "Name": "Public Option Healthcare (Cascade Care)",
+            "Desc": "Offer a state-subsidized health plan to lower costs for individual shoppers.",
+            "Verdict": "Compromised (Initial enrollment was low and premiums remained higher than expected)",
+            "Verdict_desc": "The plan launched but struggled to attract participants due to limited provider networks initially."
+          }
+        }
+      },
+      {
+        "Name": "Kristi Noem",
+        "Affiliation": "Republican",
+        "Level": "State",
+        "Role": "Former Governor of South Dakota",
+        "Year": 2018,
+        "Propositions": {
+          "1": {
+            "Name": "No New Taxes Pledge",
+            "Desc": "Commit to vetoing any effort to increase state taxes on citizens.",
+            "Verdict": "Success",
+            "Verdict_desc": "South Dakota maintained its status as one of the lowest-tax states under her tenure."
+          },
+          "2": {
+            "Name": "Industrial Hemp Legalization",
+            "Desc": "Allow South Dakota farmers to grow and process industrial hemp.",
+            "Verdict": "Compromised (Initial vetoes delayed legalization until stricter law enforcement rules passed)",
+            "Verdict_desc": "She rejected early bills, requiring more robust testing and transport rules before signing."
+          },
+          "3": {
+            "Name": "Second Amendment Protection",
+            "Desc": "Enact 'Constitutional Carry' so permits are not required for concealed weapons.",
+            "Verdict": "Success",
+            "Verdict_desc": "Signed the permitless carry bill in 2019, her first major legislative victory."
+          }
+        }
+      },
+      {
+        "Name": "Doug Ducey",
+        "Affiliation": "Republican",
+        "Level": "State",
+        "Role": "Former Governor of Arizona",
+        "Year": 2018,
+        "Propositions": {
+          "1": {
+            "Name": "20 by 2020 (Teacher Pay)",
+            "Desc": "Increase teacher salaries by 20% by the year 2020.",
+            "Verdict": "Success",
+            "Verdict_desc": "Successfully funded the raises following the 'Red for Ed' protests in 2018."
+          },
+          "2": {
+            "Name": "Arizona Border Strike Force",
+            "Desc": "A multi-agency law enforcement effort to combat cartels and border crime.",
+            "Verdict": "Success",
+            "Verdict_desc": "The unit was fully established and has conducted thousands of arrests and drug seizures."
+          },
+          "3": {
+            "Name": "Abolish State Income Tax",
+            "Desc": "Move Arizona toward a 0% flat tax or total elimination of income tax.",
+            "Verdict": "Compromised (Reached a low flat tax but not total elimination)",
+            "Verdict_desc": "Signed a 2.5% flat tax in 2021, the lowest in the nation at the time."
+          }
+        }
+      },
+      {
+        "Name": "Phil Murphy",
+        "Affiliation": "Democratic",
+        "Level": "State",
+        "Role": "Governor of New Jersey",
+        "Year": 2017,
+        "Propositions": {
+          "1": {
+            "Name": "$15 Minimum Wage",
+            "Desc": "Raise the state's hourly minimum wage to $15 by 2024.",
+            "Verdict": "Success",
+            "Verdict_desc": "New Jersey officially reached the $15.13 per hour milestone on January 1, 2024."
+          },
+          "2": {
+            "Name": "Millionaires Tax",
+            "Desc": "Apply a higher tax rate to income over $1 million to fund schools.",
+            "Verdict": "Success",
+            "Verdict_desc": "Passed the tax in 2020 after years of negotiation with the state legislature."
+          },
+          "3": {
+            "Name": "State-Level Public Bank",
+            "Desc": "Establish a state-run bank to fund local infrastructure and small businesses.",
+            "Verdict": "Failed (Legislative and regulatory hurdles effectively stalled the bank's creation)",
+            "Verdict_desc": "The proposal was studied by a board but never gained the necessary legislative traction."
+          }
+        }
+      },
+      {
+        "Name": "Charlie Baker",
+        "Affiliation": "Republican",
+        "Level": "State",
+        "Role": "Former Governor of Massachusetts",
+        "Year": 2018,
+        "Propositions": {
+          "1": {
+            "Name": "MBTA Operational Reform",
+            "Desc": "Fix the finances and safety of Boston's troubled transit system.",
+            "Verdict": "Compromised (Persistent safety issues and shutdowns led to federal intervention)",
+            "Verdict_desc": "Despite increased funding, the T faced critical derailments that prompted a federal safety probe."
+          },
+          "2": {
+            "Name": "Opioid Crisis Response",
+            "Desc": "Double spending on treatment and prevention while limiting opioid prescriptions.",
+            "Verdict": "Success",
+            "Verdict_desc": "Massachusetts saw a dip in overdose deaths following his landmark 2016 and 2018 bills."
+          },
+          "3": {
+            "Name": "Housing Choice Legislation",
+            "Desc": "Reform zoning laws to make it easier for towns to approve housing.",
+            "Verdict": "Success",
+            "Verdict_desc": "Lowered the voting threshold for local zoning changes from two-thirds to a simple majority."
+          }
+        }
+      },
+      {
+        "Name": "Eric Adams",
+        "Affiliation": "Democratic",
+        "Level": "Local",
+        "Role": "Mayor of New York City",
+        "Year": 2021,
+        "Status": "Currently in office",
+        "Propositions": {
+          "1": {
+            "Name": "Reinstate Plainclothes Anti-Gun Unit",
+            "Desc": "Bring back a specialized police unit focused on removing illegal guns from the streets.",
+            "Verdict": "Success",
+            "Verdict_desc": "The Neighborhood Safety Teams were launched in early 2022 and have been credited with thousands of gun arrests."
+          },
+          "2": {
+            "Name": "Reduce Agency Budgets by 3-5%",
+            "Desc": "Cut waste by requiring every city agency to find internal savings.",
+            "Verdict": "Compromised (Crisis-level migrant costs and staffing shortages prevented full savings targets)",
+            "Verdict_desc": "While many agencies met 'Program to Eliminate the Gap' goals, police and social services saw costs rise due to overtime and migrant care."
+          },
+          "3": {
+            "Name": "City of Yes (Zoning Reform)",
+            "Desc": "Modernize city zoning laws to allow more housing and business growth everywhere.",
+            "Verdict": "Success",
+            "Verdict_desc": "The 'City of Yes for Housing Opportunity' was approved in 2025, marking the most significant zoning reform in decades."
+          }
+        }
+      },
+      {
+        "Name": "Lori Lightfoot",
+        "Affiliation": "Democratic",
+        "Level": "Local",
+        "Role": "Former Mayor of Chicago",
+        "Year": 2019,
+        "Status": "Left office May 2023",
+        "Propositions": {
+          "1": {
+            "Name": "Eliminate Aldermanic Prerogative",
+            "Desc": "End the power of local council members to block affordable housing in their wards.",
+            "Verdict": "Compromised (Council resistance led to limited reforms rather than total elimination)",
+            "Verdict_desc": "She signed an executive order curbing some powers, but the Council maintained significant informal control over local zoning."
+          },
+          "2": {
+            "Name": "Raise Minimum Wage to $15",
+            "Desc": "Establish a city-wide minimum wage of fifteen dollars per hour.",
+            "Verdict": "Success",
+            "Verdict_desc": "The wage increase was successfully implemented in 2021 for large businesses and 2023 for smaller ones."
+          },
+          "3": {
+            "Name": "Reduce Violent Crime",
+            "Desc": "Lower Chicago's homicide and shooting rates significantly from 2019 levels.",
+            "Verdict": "Failed (Homicides reached a twenty-five year high during her second year)",
+            "Verdict_desc": "After an initial dip, crime spiked in 2021 with over 800 homicides, a major factor in her 2023 loss."
+          }
+        }
+      },
+      {
+        "Name": "London Breed",
+        "Affiliation": "Democratic",
+        "Level": "Local",
+        "Role": "Former Mayor of San Francisco",
+        "Year": 2018,
+        "Status": "Left office January 2025",
+        "Propositions": {
+          "1": {
+            "Name": "Build 82,000 Homes",
+            "Desc": "The 'Housing for All' plan to meet state-mandated construction goals by 2031.",
+            "Verdict": "Failed (Permitting was too slow to meet the required annual pace)",
+            "Verdict_desc": "Despite streamlined rules, actual construction starts remained at historic lows due to high costs and interest rates."
+          },
+          "2": {
+            "Name": "Tenderloin Emergency Declaration",
+            "Desc": "Declare a state of emergency to clear drug markets and connect addicts to care.",
+            "Verdict": "Compromised (Temporary street improvements were not sustained as overdose deaths rose)",
+            "Verdict_desc": "The emergency center closed after six months, and fentanyl deaths reached record highs in late 2023."
+          },
+          "3": {
+            "Name": "30 by 30 (Downtown Revitalization)",
+            "Desc": "Bring 30,000 new residents and students to the downtown core by 2030.",
+            "Verdict": "Active",
+            "Verdict_desc": "She launched several office-to-housing conversion tax breaks that remain active under the Lurie administration in 2026."
+          }
+        }
+      },
+      {
+        "Name": "Muriel Bowser",
+        "Affiliation": "Democratic",
+        "Level": "Local",
+        "Role": "Mayor of Washington D.C.",
+        "Year": 2022,
+        "Status": "Currently in office",
+        "Propositions": {
+          "1": {
+            "Name": "36,000 New Housing Units",
+            "Desc": "Produce 36,000 new units of housing, including 12,000 affordable ones, by 2025.",
+            "Verdict": "Success",
+            "Verdict_desc": "The city surpassed the 36k unit goal ahead of schedule in early 2025."
+          },
+          "2": {
+            "Name": "D.C. Statehood",
+            "Desc": "Advocate for the District to become the 51st state of the Union.",
+            "Verdict": "Failed (Required federal legislation lacked the sixty Senate votes for passage)",
+            "Verdict_desc": "Despite two House votes in favor, the Senate filibuster effectively blocked statehood throughout her term."
+          },
+          "3": {
+            "Name": "Revitalize RFK Campus",
+            "Desc": "Transform the 190-acre stadium site into a mixed-use residential and sports hub.",
+            "Verdict": "Success",
+            "Verdict_desc": "Successfully gained federal control of the land and secured the return of the Commanders in late 2025."
+          }
+        }
+      },
+      {
+        "Name": "Mike Duggan",
+        "Affiliation": "Independent",
+        "Level": "Local",
+        "Role": "Mayor of Detroit",
+        "Year": 2021,
+        "Status": "Left office January 2026",
+        "Propositions": {
+          "1": {
+            "Name": "Eliminate Blight",
+            "Desc": "Demolish or renovate every abandoned house in the city using Bond funding.",
+            "Verdict": "Success",
+            "Verdict_desc": "By late 2025, Detroit had cleared over 25,000 blighted properties, transforming neighborhood safety."
+          },
+          "2": {
+            "Name": "Detroit Promise",
+            "Desc": "Guarantee free college tuition for every Detroit high school graduate.",
+            "Verdict": "Success",
+            "Verdict_desc": "The program has provided free tuition to over 5,000 students as of 2026."
+          },
+          "3": {
+            "Name": "Land Value Tax",
+            "Desc": "Shift property taxes from buildings to land value to discourage speculation.",
+            "Verdict": "Failed (The state legislature declined to pass the necessary enabling laws)",
+            "Verdict_desc": "Despite a massive push in 2023-24, the plan failed to get a vote in Lansing."
+          }
+        }
+      },
+      {
+        "Name": "Brandon Johnson",
+        "Affiliation": "Democratic",
+        "Level": "Local",
+        "Role": "Mayor of Chicago",
+        "Year": 2023,
+        "Status": "Currently in office",
+        "Propositions": {
+          "1": {
+            "Name": "Bring Chicago Home",
+            "Desc": "Raise real estate transfer taxes on luxury sales to fund homelessness services.",
+            "Verdict": "Success",
+            "Verdict_desc": "Successfully passed the measure at the ballot in 2024 after a lengthy legal battle."
+          },
+          "2": {
+            "Name": "Treatment Not Trauma",
+            "Desc": "Reopen public mental health clinics and remove police from mental health calls.",
+            "Verdict": "Compromised (Budget constraints and staffing shortages delayed reopening all target clinics)",
+            "Verdict_desc": "While several pilot centers opened, the 2026 budget shows full implementation is still years away."
+          },
+          "3": {
+            "Name": "End Sub-minimum Wage for Tipped Workers",
+            "Desc": "Phase out the lower wage for restaurant servers to reach a full minimum wage.",
+            "Verdict": "Success",
+            "Verdict_desc": "Signed the ordinance in 2023 with a five-year phase-in plan starting in 2024."
+          }
+        }
+      },
+      {
+        "Name": "Ron Nirenberg",
+        "Affiliation": "Democratic",
+        "Level": "Local",
+        "Role": "Former Mayor of San Antonio",
+        "Year": 2023,
+        "Status": "Left office June 2025",
+        "Propositions": {
+          "1": {
+            "Name": "Ready to Work (Job Training)",
+            "Desc": "Enroll 40,000 residents in higher-paying career training programs.",
+            "Verdict": "Compromised (Enrollment numbers were strong but job placement rates lagged behind)",
+            "Verdict_desc": "While thousands trained, critics noted many did not land the high-wage jobs initially promised."
+          },
+          "2": {
+            "Name": "San Antonio Climate Action Plan",
+            "Desc": "A plan to reach carbon neutrality for city operations by 2050.",
+            "Verdict": "Success",
+            "Verdict_desc": "Successfully launched the plan and secured millions in 'Green Challenge' grants to begin solar conversion."
+          },
+          "3": {
+            "Name": "Affordable Housing Bond",
+            "Desc": "A $150 million bond to build and preserve thousands of affordable units.",
+            "Verdict": "Success",
+            "Verdict_desc": "Voters overwhelmingly approved the bond in 2022, and projects were fully allocated by 2025."
+          }
+        }
+      },
+      {
+        "Name": "Quinton Lucas",
+        "Affiliation": "Democratic",
+        "Level": "Local",
+        "Role": "Mayor of Kansas City",
+        "Year": 2023,
+        "Propositions": {
+          "1": {
+            "Name": "Affordable Housing Trust Fund",
+            "Desc": "Secure $50 million to create 8,000 units of affordable housing.",
+            "Verdict": "Success",
+            "Verdict_desc": "The fund reached full capacity in 2024 and has projects under construction across the city."
+          },
+          "2": {
+            "Name": "Zero-Fare Transit",
+            "Desc": "Maintain the nation's first zero-fare bus system indefinitely.",
+            "Verdict": "Success",
+            "Verdict_desc": "Despite fiscal pressure, Lucas maintained the fare-free status in every budget through 2026."
+          },
+          "3": {
+            "Name": "Ban Glock Switches",
+            "Desc": "Local ordinance to ban the sale and possession of automatic fire components.",
+            "Verdict": "Compromised (State preemption laws prevented the city from enforcing the ban)",
+            "Verdict_desc": "While the city passed the law, Missouri state law effectively nullified its enforcement power."
+          }
+        }
+      },
+      {
+        "Name": "Francis Suarez",
+        "Affiliation": "Republican",
+        "Level": "Local",
+        "Role": "Mayor of Miami",
+        "Year": 2021,
+        "Status": "Currently in office",
+        "Propositions": {
+          "1": {
+            "Name": "MiamiCoin / Crypto Hub",
+            "Desc": "Make Miami the global capital of cryptocurrency and generate revenue via MiamiCoin.",
+            "Verdict": "Failed (The coin value crashed and the project was suspended indefinitely)",
+            "Verdict_desc": "Following the 2022 crypto crash, the MiamiCoin platform lost 99% of its value."
+          },
+          "2": {
+            "Name": "Venture Capital Attraction",
+            "Desc": "Aggressively market Miami to Silicon Valley firms to diversify the local economy.",
+            "Verdict": "Success",
+            "Verdict_desc": "Successfully attracted hundreds of tech firms and billions in capital to Miami between 2021 and 2024."
+          },
+          "3": {
+            "Name": "Underline Park Construction",
+            "Desc": "Transform the land under the Metrorail into a 10-mile urban park and trail.",
+            "Verdict": "Active",
+            "Verdict_desc": "Phase 2 was completed in 2024; the final phase is currently under construction for a 2026 opening."
+          }
+        }
+      },
+      {
+        "Name": "Katie Hobbs",
+        "Affiliation": "Democratic",
+        "Level": "State",
+        "Role": "Governor of Arizona",
+        "Year": 2022,
+        "Status": "Running for re-election in 2026",
+        "Propositions": {
+          "1": {
+            "Name": "Lower Costs for Families",
+            "Desc": "Cut taxes on essential items like diapers and feminine hygiene products.",
+            "Verdict": "Success",
+            "Verdict_desc": "Successfully worked with a GOP legislature to eliminate the state sales tax on these items by 2024."
+          },
+          "2": {
+            "Name": "Secure Arizona's Water Future",
+            "Desc": "Close loopholes allowing foreign entities to pump unlimited groundwater.",
+            "Verdict": "Success",
+            "Verdict_desc": "Rescinded leases for Saudi-owned Almarai and established new groundwater pumping limits in 2025."
+          },
+          "3": {
+            "Name": "Fix the Teacher Shortage",
+            "Desc": "Increase teacher pay and scholarship funding to fill thousands of vacancies.",
+            "Verdict": "Compromised (Budget deficits in 2025 led to smaller salary increases than promised)",
+            "Verdict_desc": "While scholarships expanded, the general pay raise fell short of the 10% target due to revenue gaps."
+          }
+        }
+      },
+      {
+        "Name": "Josh Shapiro",
+        "Affiliation": "Democratic",
+        "Level": "State",
+        "Role": "Governor of Pennsylvania",
+        "Year": 2022,
+        "Status": "Running for re-election in 2026",
+        "Propositions": {
+          "1": {
+            "Name": "$15 Minimum Wage",
+            "Desc": "Raise Pennsylvania's minimum wage from $7.25 to $15 per hour.",
+            "Verdict": "Active/Stalled",
+            "Verdict_desc": "While the House passed the bill, the Republican-led Senate has blocked the $15 threshold as of early 2026."
+          },
+          "2": {
+            "Name": "Eliminate the Cell Phone Tax",
+            "Desc": "Fully repeal the 11% tax on wireless services for all Pennsylvanians.",
+            "Verdict": "Success",
+            "Verdict_desc": "The repeal was signed into law in 2024, providing immediate savings for millions of residents."
+          },
+          "3": {
+            "Name": "Fast-Track Professional Permitting",
+            "Desc": "Implement a 'money-back guarantee' if professional licenses aren't processed on time.",
+            "Verdict": "Success",
+            "Verdict_desc": "The PAyback program launched in 2023, drastically reducing wait times for nurses, teachers, and barbers."
+          }
+        }
+      },
+      {
+        "Name": "Wes Moore",
+        "Affiliation": "Democratic",
+        "Level": "State",
+        "Role": "Governor of Maryland",
+        "Year": 2022,
+        "Status": "Running for re-election in 2026",
+        "Propositions": {
+          "1": {
+            "Name": "End Childhood Poverty",
+            "Desc": "Use the 'ENOUGH Act' to pour state resources into the poorest zip codes.",
+            "Verdict": "Success",
+            "Verdict_desc": "Maryland reported a 12% drop in childhood poverty in 2025 following the act's first full year."
+          },
+          "2": {
+            "Name": "Rebuild the Key Bridge",
+            "Desc": "Restore the Port of Baltimore's vital crossing following the 2024 collapse.",
+            "Verdict": "Active",
+            "Verdict_desc": "Secured full federal funding; the new bridge structure is currently on track for a 2028 completion."
+          },
+          "3": {
+            "Name": "Maryland Service Year Option",
+            "Desc": "Offer high school graduates a paid year of service with a $6,000 stipend.",
+            "Verdict": "Success",
+            "Verdict_desc": "The first-in-the-nation program successfully placed over 2,000 participants in its 2025 cycle."
+          }
+        }
+      },
+      {
+        "Name": "Jim Pillen",
+        "Affiliation": "Republican",
+        "Level": "State",
+        "Role": "Governor of Nebraska",
+        "Year": 2022,
+        "Propositions": {
+          "1": {
+            "Name": "Historic Income Tax Cuts",
+            "Desc": "Lower the top individual and corporate income tax rates to 3.99%.",
+            "Verdict": "Success",
+            "Verdict_desc": "Signed the LB754 package, with the final rate cuts taking effect in January 2026."
+          },
+          "2": {
+            "Name": "Agricultural Property Tax Relief",
+            "Desc": "Cut property taxes by 40% for Nebraska farmers and homeowners.",
+            "Verdict": "Compromised (Revenue shortfalls limited total relief to twenty-five percent for most)",
+            "Verdict_desc": "While relief was provided, the state failed to meet the 40% target due to economic cooling."
+          },
+          "3": {
+            "Name": "Medicaid Work Requirements",
+            "Desc": "Condition Medicaid eligibility for able-bodied adults on meeting work mandates.",
+            "Verdict": "Active",
+            "Verdict_desc": "The state filed for a federal waiver in late 2025, with implementation planned for May 2026."
+          }
+        }
+      },
+      {
+        "Name": "Maura Healey",
+        "Affiliation": "Democratic",
+        "Level": "State",
+        "Role": "Governor of Massachusetts",
+        "Year": 2022,
+        "Propositions": {
+          "1": {
+            "Name": "Affordable Homes Act",
+            "Desc": "Authorize $4 billion to build 65,000 new units of housing.",
+            "Verdict": "Success",
+            "Verdict_desc": "The largest housing bond in state history was signed in 2024 and is currently funding projects."
+          },
+          "2": {
+            "Name": "Free Community College",
+            "Desc": "Provide tuition-free community college to all Massachusetts residents.",
+            "Verdict": "Success",
+            "Verdict_desc": "The 'MassEducate' program reached full funding in the 2026 state budget."
+          },
+          "3": {
+            "Name": "Fix the MBTA (The T)",
+            "Desc": "Bring the Boston transit system back to full safety and reliability.",
+            "Verdict": "Compromised (Slow zones were reduced but system-wide staffing remains a crisis)",
+            "Verdict_desc": "Despite record hiring, service frequency has not yet returned to pre-pandemic levels as of 2026."
+          }
+        }
+      },
+      {
+        "Name": "Sarah Huckabee Sanders",
+        "Affiliation": "Republican",
+        "Level": "State",
+        "Role": "Governor of Arkansas",
+        "Year": 2022,
+        "Status": "Running for re-election in 2026",
+        "Propositions": {
+          "1": {
+            "Name": "Arkansas LEARNS Act",
+            "Desc": "Implement universal school choice and raise starting teacher pay to $50,000.",
+            "Verdict": "Success",
+            "Verdict_desc": "Passed in 2023; over 90% of districts met the $50k salary floor by 2025."
+          },
+          "2": {
+            "Name": "Eliminate the State Income Tax",
+            "Desc": "A phased approach to fully repeal Arkansas' individual income tax.",
+            "Verdict": "Compromised (Revenue triggers slowed the repeal after the 2025 economic dip)",
+            "Verdict_desc": "While rates were lowered three times, the final repeal is currently stalled by budget guardrails."
+          },
+          "3": {
+            "Name": "Ban 'Woke' Terminology",
+            "Desc": "Prohibit the use of terms like 'Latinx' and 'equity' in state documents.",
+            "Verdict": "Success",
+            "Verdict_desc": "Enforced via multiple executive orders and legislative packages signed between 2023 and 2025."
+          }
+        }
+      },
+      {
+        "Name": "Joe Lombardo",
+        "Affiliation": "Republican",
+        "Level": "State",
+        "Role": "Governor of Nevada",
+        "Year": 2022,
+        "Status": "Running for re-election in 2026",
+        "Propositions": {
+          "1": {
+            "Name": "Department of Government Efficiency",
+            "Desc": "Audit every state agency to eliminate waste and redundant spending.",
+            "Verdict": "Success",
+            "Verdict_desc": "Formally established in 2025; identified over $200 million in potential savings by early 2026."
+          },
+          "2": {
+            "Name": "Education Freedom Accounts",
+            "Desc": "Provide state funds for parents to use at private or charter schools.",
+            "Verdict": "Failed (The Democratic-led legislature refused to fund the voucher program)",
+            "Verdict_desc": "Lombardo vetoed the state budget in 2023 over this, but ultimately lost the funding battle."
+          },
+          "3": {
+            "Name": "Suspend the Gas Tax",
+            "Desc": "Pause Nevada's 23-cent gas tax to provide inflation relief.",
+            "Verdict": "Failed (Democratic leadership blocked the suspension to protect road funding)",
+            "Verdict_desc": "The proposal never reached a floor vote during his first two legislative sessions."
+          }
+        }
+      },
+      {
+        "Name": "Daniel Lurie",
+        "Affiliation": "Democratic",
+        "Level": "Local",
+        "Role": "Mayor of San Francisco",
+        "Year": 2024,
+        "Status": "Currently in office",
+        "Propositions": {
+          "1": {
+            "Name": "Clear Street Encampments",
+            "Desc": "A 'zero tolerance' policy for tents on public sidewalks and parks.",
+            "Verdict": "Success",
+            "Verdict_desc": "Reported a 44% drop in encampments by December 2025 using a shelter-first approach."
+          },
+          "2": {
+            "Name": "PermitSF (Faster Permitting)",
+            "Desc": "Slash building permit wait times for small businesses and housing.",
+            "Verdict": "Success",
+            "Verdict_desc": "Met the goal of approving over-the-counter permits within 48 hours for 80% of applicants."
+          },
+          "3": {
+            "Name": "Stabilize the Overdose Crisis",
+            "Desc": "Reduce fentanyl deaths by 25% within his first two years.",
+            "Verdict": "Compromised (Overdose deaths stabilized in 2025 but did not significantly drop)",
+            "Verdict_desc": "The 2025 report showed deaths 'on track' with 2024 levels, missing the 25% reduction target."
+          }
+        }
+      },
+      {
+        "Name": "Cherelle Parker",
+        "Affiliation": "Democratic",
+        "Level": "Local",
+        "Role": "Mayor of Philadelphia",
+        "Year": 2023,
+        "Status": "Currently in office",
+        "Propositions": {
+          "1": {
+            "Name": "1,000 New Shelter Beds",
+            "Desc": "Rapidly expand shelter capacity to end street homelessness in Philly.",
+            "Verdict": "Success",
+            "Verdict_desc": "Signed Executive Order 7-25 in late 2025, fully funding and operating the new beds."
+          },
+          "2": {
+            "Name": "30,000 New Housing Units",
+            "Desc": "Build, restore, or repair 30,000 homes to address the city's crisis.",
+            "Verdict": "Active",
+            "Verdict_desc": "Allocated $2 billion through the H.O.M.E. plan; projects are entering the construction phase in 2026."
+          },
+          "3": {
+            "Name": "Safe Commercial Corridors",
+            "Desc": "Deploy cleaning and greening crews to every major neighborhood business street.",
+            "Verdict": "Success",
+            "Verdict_desc": "The TCB program reported a 50% litter reduction across all target corridors by 2025."
+          }
+        }
+      },
+      {
+        "Name": "Mike Johnston",
+        "Affiliation": "Democratic",
+        "Level": "Local",
+        "Role": "Mayor of Denver",
+        "Year": 2023,
+        "Status": "Currently in office",
+        "Propositions": {
+          "1": {
+            "Name": "House1000",
+            "Desc": "Move 1,000 people experiencing street homelessness indoors by year one.",
+            "Verdict": "Success",
+            "Verdict_desc": "Successfully met the goal in 2023 and closed the city's 10 largest encampments."
+          },
+          "2": {
+            "Name": "All In Mile High",
+            "Desc": "A follow-up goal to bring 2,000 additional people indoors by late 2024.",
+            "Verdict": "Success",
+            "Verdict_desc": "Surpassed the goal, moving over 2,500 people indoors and clearing 350 city blocks."
+          },
+          "3": {
+            "Name": "Close the $200 Million Deficit",
+            "Desc": "Balance Denver's budget through departmental cuts and hiring freezes.",
+            "Verdict": "Compromised (Budget was balanced but required deep cuts to popular programs)",
+            "Verdict_desc": "The 2026 budget proposal includes $195 million in cuts that sparked significant protest."
+          }
+        }
+      }
+  ]
+}

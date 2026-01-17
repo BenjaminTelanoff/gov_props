@@ -1,0 +1,4 @@
+firebase-admin
+# Optional: for AI summarization (choose one or both)
+# openai
+# google-generativeai
