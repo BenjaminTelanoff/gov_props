@@ -1,9 +1,20 @@
 :host {
-  //background-image: url("/public/profile-back-1.png");
-  background-color: #000;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  //height: 100%;
+  min-height: 100vh;
+  //background-color: #000;
+  background-size: cover;        // scale image to cover
+  background-position: center;   // center image
+  background-repeat: no-repeat;  // don’t tile
+
+  img {
+    z-index: -4;
+    position: fixed;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
 
   .container {
     max-width: 900px;
@@ -29,6 +40,10 @@
     border-top-right-radius: 0;
     margin: 0 auto 2rem auto;
 
+    p {
+      margin-left: 10px;
+    }
+
     button {
       font-family: 'Work Sans';
       border: none;
@@ -42,7 +57,7 @@
   }
 
   header {
-    //margin-bottom: 10px;
+    //margin-left: 10px;
     .name {
       display: flex;
       justify-content: space-between;
@@ -61,6 +76,13 @@
         margin-bottom: 10px; 
       }
     }
+
+    h3 {
+      padding-left: 10px;
+      font-size: 20px;
+      
+    }
+
     .tags {
       margin-top:20px;
       display: flex; gap: 10px; margin-bottom: 1rem;
