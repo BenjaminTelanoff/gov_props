@@ -4,6 +4,7 @@ import { Firestore, collection, query, where, getDocs } from '@angular/fire/fire
 import { CommonModule } from '@angular/common';
 import { Observable, from, map, switchMap } from 'rxjs';
 import { MatIconModule } from '@angular/material/icon';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile-page',
@@ -18,12 +19,18 @@ import { MatIconModule } from '@angular/material/icon';
 export class ProfilePage implements OnInit {
   private firestore: Firestore = inject(Firestore);
   private route: ActivatedRoute = inject(ActivatedRoute);
+
+  constructor (private router: Router,) {}
   
   // Observable to hold the politician data from Firestore
   politician$: Observable<any> | undefined;
   
   // Property to hold the proposition currently being viewed in the modal
   selectedProp: any = null;
+
+  goBack(): void {
+    this.router.navigate(['/']);
+  }
 
   ngOnInit() {
     // Get the name parameter from the URL and query Firestore by Name field
@@ -78,5 +85,20 @@ export class ProfilePage implements OnInit {
       return 'status-failed';
     }
     return 'status-default';
+  }
+
+  // Calculate sentiment color based on percentage (battery indicator style)
+  getSentimentColor(percentage: number): string {
+    // Red (0-33%) -> Yellow (33-66%) -> Green (66-100%)
+    if (percentage <= 33) {
+      // Red: #ef5350
+      return '#ef5350';
+    } else if (percentage <= 66) {
+      // Yellow/Orange: #ffa726
+      return '#ffa726';
+    } else {
+      // Green: #66bb6a
+      return '#66bb6a';
+    }
   }
 }

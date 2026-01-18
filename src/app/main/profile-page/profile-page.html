@@ -1,7 +1,12 @@
 @if (politician$ | async; as p) {
   <div class="container">
     <header>
-      <h1>{{ p.Name }}</h1>
+      <div class="name">
+        <h1>{{ p.Name }}</h1>
+        <button (click)="goBack()">
+          <mat-icon>arrow_forward</mat-icon>
+        </button>
+      </div>
       <div class="tags">
         <span class="tag" class="tag" [style.background-color]="p.Affiliation === 'Republican' ? '#ffebee' : p.Affiliation === 'Democratic' ? '#e3f2fd' : '#f4f4f4'">
           {{ p.Affiliation }}
@@ -11,7 +16,6 @@
       <p class="subtitle">{{ p.Status }}</p>
     </header>
     <section class="ai-overview-section">
-      <h3>Biography:</h3>
       <p>{{ p.politician_description }}</p>
     </section>
     <section class="prop-section">
@@ -35,7 +39,7 @@
                   {{ prop.Verdict?.split(' ')[0] }}
                 </span>
               </td>
-              <td class="consensus-text">{{ prop.Verdict_desc }}</td>
+              <td class="consensus-text">{{ prop.sentiment_sentence_summary }}</td>
             </tr>
           }
         </tbody>
@@ -51,6 +55,29 @@
           <p class="modal-status-line">
             Prop Status: <span [class]="getStatusClass(selectedProp.Verdict)">{{ selectedProp.Verdict }}</span>
           </p>
+          <div class="bottom-container">
+            <div class="left">
+              <h4>Verdict description:</h4>
+              <p>{{ selectedProp.Verdict_desc }}</p>
+              <h4>Overall sentiment:</h4>
+              <p>{{ selectedProp.sentiment_paragraph_summary }}</p>
+            </div>
+            <div class="right">
+              <h4>Public approval:</h4>
+              <div class="sentiment-bar-container">
+                <div class="sentiment-bar">
+                  <div class="sentiment-bar-fill" [style.width.%]="selectedProp.sentiment_happy_pct" [style.background-color]="getSentimentColor(selectedProp.sentiment_happy_pct)"></div>
+                  <span class="sentiment-bar-label">{{ selectedProp.sentiment_happy_pct }}%</span>
+                </div>
+              </div>
+              <h4>Top subreddits:</h4>
+              <ul>
+                @for (reddit of selectedProp.subreddit_name; track reddit) {
+                  <li><a [href]="'https://reddit.com/r/' + reddit" target="_blank" rel="noopener noreferrer">{{ reddit }}</a></li>
+                }
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     }
