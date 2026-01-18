@@ -8,6 +8,10 @@
       </div>
       <p class="subtitle">{{ p.Status }}</p>
     </header>
+        <section class="ai-overview-section">
+      <h3>AI Overview:</h3>
+      <p>{{ p.politician_description }}</p>
+    </section>
     <section class="prop-section">
       <table class="prop-table">
         <thead>
@@ -26,7 +30,7 @@
               </td>
               <td>
                 <span [class]="getStatusClass(prop.Verdict)">
-                  {{ prop.Verdict }}
+                  {{ prop.Verdict?.split(' ')[0] }}
                 </span>
               </td>
               <td class="consensus-text">{{ prop.Verdict_desc }}</td>
@@ -35,12 +39,6 @@
         </tbody>
       </table>
     </section>
-
-    <section class="ai-overview-section">
-      <h3>AI Overview:</h3>
-      <p>{{ p.politician_description }}</p>
-    </section>
-
     @if (selectedProp) {
       <div class="modal-backdrop" (click)="closeModal()">
         <div class="modal-content" (click)="$event.stopPropagation()">
@@ -51,19 +49,12 @@
           <p class="modal-status-line">
             Prop Status: <span [class]="getStatusClass(selectedProp.Verdict)">{{ selectedProp.Verdict }}</span>
           </p>
-
-          <div class="modal-ai-box">
-            <p class="label">AI Overview</p>
-            <p class="main-desc">{{ selectedProp.Desc }}</p>
-            <hr />
-            <p class="verdict-detail">{{ selectedProp.Verdict_desc }}</p>
-          </div>
         </div>
       </div>
     }
   </div>
 } @else {
   <div>
-    <p>404. Sorry, this page doesn't exist.</p>
+    <p>Loading...</p>
   </div>
 }

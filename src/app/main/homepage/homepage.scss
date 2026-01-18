@@ -3,23 +3,79 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:20px;
     height: 100vh;
-    
+    background-color: black;
+    color: white;
 
+    h1 {
+        font-family: 'Gabarito';
+        font-size: 80px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-family: 'Work Sans';
+        font-size: 25px;
+        font-weight: 400;
+    }
     form {
+        color: black;
+        margin-top: 10px;
+        
         mat-form-field {
-            width: 500px;
+            width: 600px;
 
             .searchbar-container {
                 display: flex;
                 gap: 20px;
+                align-items: center;
+
+                mat-icon {
+                    height: 24px;
+                    width: 24px;
+                    font-size: 24px;
+                    line-height: 24px;
+                }
 
                 button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     background-color: transparent;
                     border: none;
                 }
             }
+        }
+    }
+
+    @media (max-width: 650px) {
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h3 {
+            font-size: 12px;
+        }
+
+        form {
+            margin-top: 10px;
+
+            mat-form-field {
+                width: 90vw;
+                --mat-sys-surface-variant: white;
+                --mat-sys-surface-container: white;
+
+                .searchbar-container {
+                    display: flex;
+                    gap: 20px;
+
+                    button {
+                        background-color: transparent;
+                        border: none;
+                    }
+                }
+            }
+
         }
     }
 }

@@ -3,11 +3,15 @@ import { ActivatedRoute } from '@angular/router';
 import { Firestore, collection, query, where, getDocs } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
 import { Observable, from, map, switchMap } from 'rxjs';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-profile-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    MatIconModule,
+  ],
   templateUrl: './profile-page.html',
   styleUrl: './profile-page.scss',
 })
