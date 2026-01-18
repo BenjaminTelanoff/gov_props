@@ -1,86 +1,106 @@
 @if (politician$ | async; as p) {
-  <div class="container">
-    <header>
-      <div class="name">
-        <h1>{{ p.Name }}</h1>
-        <button (click)="goBack()">
-          <mat-icon>arrow_forward</mat-icon>
-        </button>
-      </div>
-      <div class="tags">
-        <span class="tag" class="tag" [style.background-color]="p.Affiliation === 'Republican' ? '#ffebee' : p.Affiliation === 'Democratic' ? '#e3f2fd' : '#f4f4f4'">
-          {{ p.Affiliation }}
-        </span>
-        <span class="tag">{{ p.Level }} Government</span>
-      </div>
-      <p class="subtitle">{{ p.Status }}</p>
-    </header>
-    <section class="ai-overview-section">
-      <p>{{ p.politician_description }}</p>
-    </section>
-    <section class="prop-section">
-      <table class="prop-table">
-        <thead>
-          <tr>
-            <th>Proposition</th>
-            <th>Prop Status</th>
-            <th>Consensus</th>
-          </tr>
-        </thead>
-        <tbody>
-          @for (prop of p.propsList; track $index) {
-            <tr (click)="openModal(prop)" class="clickable-row">
-              <td>
-                <div class="prop-title">{{ prop.Name }}</div>
-                <div class="prop-desc">{{ prop.Desc }}</div>
-              </td>
-              <td>
-                <span [class]="getStatusClass(prop.Verdict)">
-                  {{ prop.Verdict?.split(' ')[0] }}
-                </span>
-              </td>
-              <td class="consensus-text">{{ prop.sentiment_sentence_summary }}</td>
+  <div>
+    <div class="container">
+      <header>
+        <div class="name">
+          <h1>{{ p.Name }}</h1>
+          <button (click)="goBack()">
+            <mat-icon>arrow_forward</mat-icon>
+          </button>
+        </div>
+        <h3>{{ p.Role }}</h3>
+        <div class="tags">
+          <span class="tag" class="tag" [style.background-color]="p.Affiliation === 'Republican' ? '#ffebee' : p.Affiliation === 'Democratic' ? '#e3f2fd' : '#f4f4f4'">
+            {{ p.Affiliation }}
+          </span>
+          <span class="tag">{{ p.Level }} Government</span>
+        </div>
+        <p class="subtitle">{{ p.Status }}</p>
+      </header>
+      <section class="ai-overview-section">
+        <p>{{ p.politician_description }}</p>
+      </section>
+      <section class="prop-section">
+        <table class="prop-table">
+          <thead>
+            <tr>
+              <th>Proposition</th>
+              <th>Prop Status</th>
+              <th>Consensus</th>
             </tr>
-          }
-        </tbody>
-      </table>
-    </section>
-    @if (selectedProp) {
-      <div class="modal-backdrop" (click)="closeModal()">
-        <div class="modal-content" (click)="$event.stopPropagation()">
-          <button class="close-btn" (click)="closeModal()">&times;</button>
-          
-          <h2>{{ selectedProp.Name }}</h2>
-          
-          <p class="modal-status-line">
-            Prop Status: <span [class]="getStatusClass(selectedProp.Verdict)">{{ selectedProp.Verdict }}</span>
-          </p>
-          <div class="bottom-container">
-            <div class="left">
-              <h4>Verdict description:</h4>
-              <p>{{ selectedProp.Verdict_desc }}</p>
-              <h4>Overall sentiment:</h4>
-              <p>{{ selectedProp.sentiment_paragraph_summary }}</p>
-            </div>
-            <div class="right">
-              <h4>Public approval:</h4>
-              <div class="sentiment-bar-container">
-                <div class="sentiment-bar">
-                  <div class="sentiment-bar-fill" [style.width.%]="selectedProp.sentiment_happy_pct" [style.background-color]="getSentimentColor(selectedProp.sentiment_happy_pct)"></div>
-                  <span class="sentiment-bar-label">{{ selectedProp.sentiment_happy_pct }}%</span>
-                </div>
-              </div>
-              <h4>Top subreddits:</h4>
-              <ul>
-                @for (reddit of selectedProp.subreddit_name; track reddit) {
-                  <li><a [href]="'https://reddit.com/r/' + reddit" target="_blank" rel="noopener noreferrer">{{ reddit }}</a></li>
+          </thead>
+          <tbody>
+            @for (prop of p.propsList; track $index) {
+              <tr (click)="openModal(prop)" class="clickable-row">
+                <td>
+                  <div class="prop-title">{{ prop.Name }}</div>
+                  <div class="prop-desc">{{ prop.Desc }}</div>
+                </td>
+                <td>
+                  <span [class]="getStatusClass(prop.Verdict)">
+                    {{ prop.Verdict?.split(' ')[0] }}
+                  </span>
+                </td>
+                @if (prop.sentiment_sentence_summary != 'nan') {
+                  <td class="consensus-text">{{ prop.sentiment_sentence_summary }}</td>
+                } @else {
+                  <td class="consensus-text">Not enough information available.</td>
                 }
-              </ul>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </section>
+      @if (selectedProp) {
+        <div class="modal-backdrop" (click)="closeModal()">
+          <div class="modal-content" (click)="$event.stopPropagation()">
+            <button class="close-btn" (click)="closeModal()">&times;</button>
+            <h2>{{ selectedProp.Name }}</h2>
+            <p class="modal-status-line">
+              Prop Status: <span [class]="getStatusClass(selectedProp.Verdict)">{{ selectedProp.Verdict }}</span>
+            </p>
+            <div class="bottom-container">
+              <div class="left">
+                <h4>Verdict description:</h4>
+                <p>{{ selectedProp.Verdict_desc }}</p>
+                @if (selectedProp.sentiment_paragraph_summary != 'nan' && selectedProp.sentiment_paragraph_summary != '') {
+                  <h4>Overall sentiment:</h4>
+                  <p>{{ selectedProp.sentiment_paragraph_summary }}</p>
+                }
+              </div>
+              <div class="right">
+                @if (selectedProp.sentiment_happy_pct != 'nan') {
+                  <h4 class="diff">Public approval:</h4>
+                  <div class="sentiment-bar-container">
+                    <div class="sentiment-bar">
+                      <div class="sentiment-bar-fill" [style.width.%]="selectedProp.sentiment_happy_pct" [style.background-color]="getSentimentColor(selectedProp.sentiment_happy_pct)"></div>
+                      <span class="sentiment-bar-label">{{ selectedProp.sentiment_happy_pct }}%</span>
+                    </div>
+                  </div>
+                }
+                @if (selectedProp.subreddit_name.length) {
+                  <h4>Top subreddits:</h4>
+                  <ul>
+                    @for (reddit of selectedProp.subreddit_name; track reddit) {
+                      <li><a [href]="'https://reddit.com/r/' + reddit" target="_blank" rel="noopener noreferrer">{{ reddit }}</a></li>
+                    }
+                  </ul>
+                }
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    }
+      }
+    </div>
+    <div 
+      class="related-people" 
+      [style.background-color]="p.Affiliation === 'Republican' ? '#ffebee' : p.Affiliation === 'Democratic' ? '#e3f2fd' : '#f4f4f4'"
+    >
+      <p>Similar politicians:</p>
+      @for (person of p.like; track person) {
+        <button (click)="toPage(person)">{{person}}</button>
+      }
+    </div>
   </div>
 } @else {
   <div>

@@ -6,11 +6,35 @@
 
   .container {
     max-width: 900px;
-    margin: 2rem auto;
+    margin: 2rem auto 0 auto;
     font-family: 'Gabarito', sans-serif;
     padding: 1.5rem;
     background-color: white;
     border-radius: 8px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .related-people {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin: 0 auto 2rem auto;
+
+    button {
+      border: none;
+      background: #f4f4f4;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: #555;
+      cursor: pointer;
+    }
   }
 
   header {
@@ -155,9 +179,18 @@
         display: flex;
         flex-direction: column;
         width: 20%;
+        padding-bottom: 20px;
+        justify-content: flex-start;
 
+        .sentiment-bar-container {
+          margin-bottom: 40px;
+        }
+
+        .diff {
+          margin: 0 0 20px 0 ;
+        }
         h4 {
-          margin: auto 0 0 0;
+          margin: 0 0 0 0;
         }
 
         ul {

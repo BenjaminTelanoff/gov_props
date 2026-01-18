@@ -1,4 +1,6 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, DestroyRef } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { tap, shareReplay } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { Firestore, collection, query, where, getDocs } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
@@ -20,11 +22,15 @@ export class ProfilePage implements OnInit {
   private firestore: Firestore = inject(Firestore);
   private route: ActivatedRoute = inject(ActivatedRoute);
 
-  constructor (private router: Router,) {}
+  constructor (private router: Router, private destroyRef: DestroyRef,) {}
   
   // Observable to hold the politician data from Firestore
   politician$: Observable<any> | undefined;
+
+  allPoliticians$: Observable<any> | undefined;
   
+  private validNames: string[] = []
+
   // Property to hold the proposition currently being viewed in the modal
   selectedProp: any = null;
 
@@ -32,34 +38,48 @@ export class ProfilePage implements OnInit {
     this.router.navigate(['/']);
   }
 
+  toPage(person: string): void {
+    if (!this.validNames.includes(person)) {
+      console.warn("Person not found in list");
+      return;
+    }
+    this.router.navigate(['/profile', person]);
+  }
+
   ngOnInit() {
-    // Get the name parameter from the URL and query Firestore by Name field
+    const col = collection(this.firestore, 'Politicians');
+
+    // 1. Fetch list of names and sync with local array
+    this.allPoliticians$ = from(getDocs(col)).pipe(
+      map(snapshot => snapshot.docs.map(doc => doc.data()['Name'])),
+      tap(names => this.validNames = names), 
+      shareReplay(1),
+      takeUntilDestroyed(this.destroyRef) // Ensures no memory leaks
+    );
+
+    // Initial trigger for the names list
+    this.allPoliticians$.subscribe();
+
+    // 2. Fetch specific politician data
     this.politician$ = this.route.params.pipe(
       switchMap(params => {
         const name = params['name'];
-        const col = collection(this.firestore, 'Politicians');
         const q = query(col, where('Name', '==', name));
         return from(getDocs(q)).pipe(
-          map(snapshot => {
-            if (snapshot.empty) return null;
-            return snapshot.docs[0].data();
-          })
+          map(snapshot => snapshot.empty ? null : snapshot.docs[0].data())
         );
       }),
       map(data => {
         if (!data) return null;
-
-        // Convert the Propositions Map into a sorted array for the table
         const propsMap = data['Propositions'] || {};
-        const propsArray = Object.entries(propsMap)
+        const propsList = Object.entries(propsMap)
           .sort(([a], [b]) => Number(a) - Number(b))
           .map(([_, value]) => value);
         
-        return { ...data, propsList: propsArray };
+        return { ...data, propsList };
       })
     );
   }
-
   // Open modal and prevent background scrolling
   openModal(prop: any) {
     this.selectedProp = prop;
