@@ -48,7 +48,7 @@ export class Homepage implements OnInit {
     collectionData(col).pipe(
       takeUntilDestroyed(),
       map((items: any[]) => items.map(i => i.Name))
-    ).subscribe(names => {
+    ).subscribe((names: string[]) => {
       this.options.set(names);     
       this.myControl.setValue(this.myControl.value);
     });
