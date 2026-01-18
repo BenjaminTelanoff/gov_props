@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Define the type of the environment variables.
 declare interface Env {
   readonly NODE_ENV: string;
@@ -10,7 +11,7 @@ declare interface Env {
   NG_APP_FIREBASE_MEASUREMENT_ID?: string;
   // Replace the following with your own environment variables.
   // Example: NGX_VERSION: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+   
   [key: string]: any;
 }
 

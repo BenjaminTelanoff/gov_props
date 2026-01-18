@@ -8,7 +8,6 @@ import {AsyncPipe} from '@angular/common';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { inject } from '@angular/core';
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
