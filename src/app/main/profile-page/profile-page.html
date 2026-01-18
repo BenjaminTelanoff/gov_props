@@ -3,13 +3,15 @@
     <header>
       <h1>{{ p.Name }}</h1>
       <div class="tags">
-        <span class="tag">{{ p.Affiliation }}</span>
+        <span class="tag" class="tag" [style.background-color]="p.Affiliation === 'Republican' ? '#ffebee' : p.Affiliation === 'Democratic' ? '#e3f2fd' : '#f4f4f4'">
+          {{ p.Affiliation }}
+        </span>
         <span class="tag">{{ p.Level }} Government</span>
       </div>
       <p class="subtitle">{{ p.Status }}</p>
     </header>
-        <section class="ai-overview-section">
-      <h3>AI Overview:</h3>
+    <section class="ai-overview-section">
+      <h3>Biography:</h3>
       <p>{{ p.politician_description }}</p>
     </section>
     <section class="prop-section">

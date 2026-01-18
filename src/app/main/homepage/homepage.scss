@@ -6,6 +6,13 @@
     height: 100vh;
     background-color: black;
     color: white;
+    img {
+        position: fixed;
+        pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+
+    }
 
     h1 {
         font-family: 'Gabarito';
